@@ -11,7 +11,7 @@ class NewPost extends Component {
         postBody:[],
         title: '',
         content: '',
-        author: 'Aimee',
+        author: '',
         submitted: false
     }
 
@@ -85,7 +85,7 @@ class NewPost extends Component {
                 <label>Content</label>
                 <textarea rows="6" value={this.state.content} onChange={(event) => this.setState({content: event.target.value})} />
                 <label>Author</label>
-                <input value={this.state.author} onChange={(event) => this.setState({author: event.target.value})}/>
+                <input placeholder="Aimee" value={this.state.author} onChange={(event) => this.setState({author: event.target.value})}/>
                 <button onClick={()=> {if(window.confirm('Are you sure you want to send this comment?')) this.postDataHandler()}}>Add Post</button>
                 </div>
             </div>
