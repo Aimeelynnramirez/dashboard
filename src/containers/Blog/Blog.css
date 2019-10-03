@@ -1,15 +1,3 @@
-
-.Blog a{
-    text-decoration:none;
-    letter-spacing: 2px;
-    color: black;
-    cursor: pointer;
-
-}
- .Blog a:hover{
-    text-decoration:underline overline;
-    color:  #fd03b2;
-}
 .Blog {
     display: inline-block;
     width: 250px;
