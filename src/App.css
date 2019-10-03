@@ -1,13 +1,12 @@
 .App {
     font-size: 1rem;
     margin: 20px auto;
-    width: 80%;
-    height:80%;
+    height:100%;
+    width: 300px;
     max-height:100%;
     text-align: center;
     box-shadow: 0 2px 3px #ccc;
     border: 1px solid #eee;
     padding: 10px;
     box-sizing: border-box;
-    transition: transform 0.3s ease-out;
   }

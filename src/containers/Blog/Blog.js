@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch, Link} from 'react-router-dom';
 import asyncComponent from '../../hoc/asyncComponent';
 // import NewPost from './NewPost/NewPost';
+import icon from '../../assets/goosepic.png';
 import classes from './Blog.css';
 
 ///asyncNewPost here.
@@ -16,9 +17,6 @@ class Blog extends Component {
     componentDidMount(){
        // console.clear();
     }
-    underConstruction=()=>{
-     //console.log("sorry under construction")
-    }
     githubLink=() =>{
         document.location.replace('https://github.com/Aimeelynnramirez');
     }
@@ -28,32 +26,32 @@ class Blog extends Component {
     render () {
         return (
             <div>
+                  <div className={classes.Link}> 
+                  <img alt="a pink logo" src= {icon}/> 
+                 |<Link to="/" onClick={this.githubLink}>Github</Link>|
+                  <Link to="/" onClick={this.twitterLink}>Twitter</Link>|  
+                  </div> 
+                  <br/>
                 {/* <Route path="/" exact render={() => <h1>Home</h1>} />
                 <Route path="/" render={() => <h1>Home 2</h1>} /> */}
                 <Switch>
                     {this.state.importPosts ? <Route path="/new-post" component={AsyncNewPost} /> : null}
-                    <Route render={() => (<div className={classes.Blog}>
-                        <ul> 
-                           <h3>Dashboard</h3>
-                            <span role="img" aria-label="dove" onClick={this.underConstruction}>🕊️ </span>
-                            <br/>
-                            <p>Hey, I'm Aimee.
-                            <br/>
-                             Welcome to My Github Portfolio.
-                            <br/> 
-                             Kindly leave a comment to the backend!</p>
-                            <br/>
-                            <Link to="/" onClick={this.githubLink}>Github</Link>
-                            <br/>
-                            <Link to="/" onClick={this.twitterLink}>Twitter</Link>
-                            <br/>
-                            <Link to={'/new-post'
+                    <Route render={() => (
+                    <div className={classes.Blog}>
+                           <h3>Hey, I'm Aimee.</h3>
+                            <p>
+                             Kindly leave a comment below!
+                             </p>
+                             <br/> 
+                             <Link to={'/new-post'
                                // hash: '#submit',
                                // search: '?quick-submit=true'
-                            } >Comment</Link></ul>
-                            <br/>
-                     </div>)}/>
+                            }>Comment</Link>  
+                    </div>)}/>
+                    
                 </Switch>
+              
+                           
             </div>
         );
     }

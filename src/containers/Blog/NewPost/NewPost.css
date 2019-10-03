@@ -62,3 +62,18 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+a{
+    padding: 16px;
+    text-decoration:none;
+    letter-spacing: 2px;
+    color: black;
+    cursor: pointer;
+
+}
+ a:hover{
+    text-decoration:underline overline;
+    color:  #fd03b2;
+}
+h4{
+    letter-spacing: 2px;
+}

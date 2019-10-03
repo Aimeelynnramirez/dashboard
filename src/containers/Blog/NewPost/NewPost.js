@@ -23,7 +23,7 @@ class NewPost extends Component {
     }
     postDataHandler = (data) => {
     //just for scope.
-    let counter = 0;
+   // let counter = 0;
      data = {
             title: this.state.title,
             body: this.state.content,
@@ -34,8 +34,8 @@ class NewPost extends Component {
                     if(res.error) {
                         throw(res.error);
                     }
-                    counter +=1;
-                    console.log("this is counter: ",counter);
+                    //counter +=1;
+                    //console.log("this is counter: ",counter);
                     const newDataTitle = data.title;
                     const newData = data.body;
                     const newDataAuthor = data.author;
@@ -57,8 +57,8 @@ class NewPost extends Component {
        let title = this.state.title;
         let body = this.state.content;
         if (this.state.submitted) {
-        return(<div>    
-          <NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
+        return(<div>
+            <NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
             <div className={classes.NewPost}>
             <span>Confirmed!</span>
             <p>You sent:</p>
@@ -68,7 +68,7 @@ class NewPost extends Component {
             <h3>Content:</h3>
             {body}
             <br/>
-            <p>Cheers!</p>
+            <h4>Cheers!</h4>
             </div>
             </div>)
              }
