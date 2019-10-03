@@ -33,8 +33,6 @@
     }
 }
 
-
-
 .NewPost button {
     margin: 5px 0;
     padding: 10px;
@@ -44,7 +42,6 @@
     border-radius: 55px;
     background-color: transparent;
     color:   #fd03b2;
-    cursor: pointer;
 }
 
 .NewPost button:hover,
@@ -67,8 +64,6 @@ a{
     text-decoration:none;
     letter-spacing: 2px;
     color: black;
-    cursor: pointer;
-
 }
  a:hover{
     text-decoration:underline overline;

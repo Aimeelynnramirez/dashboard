@@ -50,18 +50,21 @@ class NewPost extends Component {
                     //this.props.history.push('https://aimee-github.firebaseio.com/posts.json');
                     this.setState({content:this.state.postBody,
                                    title: this.state.postTitle, 
+                                   author:this.state.postAuthor,
                                    submitted:true })
                 })        
     }   
     render () {
-       let title = this.state.title;
+        let title = this.state.title;
         let body = this.state.content;
+        let author = this.state.author;
         if (this.state.submitted) {
         return(<div>
             <NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
             <div className={classes.NewPost}>
             <span>Confirmed!</span>
-            <p>You sent:</p>
+            <p>Thanks {author}! <br/>
+             You sent :</p>
             <h3>Title:</h3>
             {title}
             <br/>
