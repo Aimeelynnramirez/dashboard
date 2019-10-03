@@ -1,5 +1,5 @@
 {
-  "name": "aimeelynnramirez.github.io",
+  "name": "dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -96,5 +96,5 @@
   },
   "author": "Aimee",
   "license": "BSD-3-Clause",
-  "homepage": "https://aimeelynnramirez.github.io"
+  "homepage": "https://aimeelynnramirez.github.io/dashboard"
 }
