@@ -17,6 +17,7 @@
 .NewPost textarea,
 .NewPost select {
     display: block;
+    max-width:180px;
     box-sizing: border-box;
     border: 1px solid black;
     outline: none;
@@ -28,7 +29,6 @@
     .NewPost textarea,
     .NewPost input{
        width:80%;
-       max-width:70%;
        min-width: 100px;
     }
 }
