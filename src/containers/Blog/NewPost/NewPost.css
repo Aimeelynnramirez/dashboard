@@ -1,0 +1,64 @@
+.NewPost {
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+}
+
+.NewPost label {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.NewPost input,
+.NewPost textarea,
+.NewPost select {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+    font: inherit;
+    margin: auto;
+    text-align: center;
+}
+@media screen and (max-width:1000px){
+    .NewPost textarea,
+    .NewPost input{
+       width:80%;
+       max-width:70%;
+       min-width: 100px;
+    }
+}
+
+
+
+.NewPost button {
+    margin: 5px 0;
+    padding: 10px;
+    font: inherit;
+    letter-spacing: 2px;
+    border: 1px solid #ac5391;
+    border-radius: 55px;
+    background-color: transparent;
+    color:   #fd03b2;
+    cursor: pointer;
+}
+
+.NewPost button:hover,
+.NewPost button:active {
+    color: white;
+    background-color: #fd03b2;
+}
+.NewPost span {
+    display: block;
+    width:50%;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #20fd03;
+    box-shadow: 0 2px 3px #ccc;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
