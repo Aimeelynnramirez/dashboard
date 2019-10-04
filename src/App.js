@@ -10,6 +10,10 @@ class App extends Component {
         <div className={classes.App}>
           <Blog />
         </div>
+        <div style={{padding:'2rem', 
+                    letterSpacing:'2px', 
+                    position:'sticky'}}>
+                    aimeelynn.</div>
       </BrowserRouter>
     );
   }

@@ -1,0 +1,19 @@
+.Button {
+    margin: 5px 0;
+    padding:  5px 0px 5px;
+    letter-spacing: 2px;
+    border: 1px solid #ac5391;
+    border-radius: 55px;
+    background-color: transparent;
+    color: #fd03b2;
+    text-align: center;
+}
+.Button:hover,
+.Button:active {
+    color: white;
+    background-color: #fd03b2;
+}
+.Button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}

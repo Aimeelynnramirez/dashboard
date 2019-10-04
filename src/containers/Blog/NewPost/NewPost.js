@@ -7,11 +7,10 @@ import { NavLink } from 'react-router-dom';
 class NewPost extends Component {
     state = {
         postAuthor:[],
-        postTitle:[],
-        postBody:[],
         title: '',
         content: '',
         author: '',
+        data:'',
         submitted: false
     }
 
@@ -25,9 +24,9 @@ class NewPost extends Component {
     //just for scope.
    // let counter = 0;
      data = {
-            title: this.state.title,
-            body: this.state.content,
-            author: this.state.author,        
+            Title: this.state.title,
+            Body: this.state.content,
+            Author: this.state.author,        
         };   
         axios.post('https://aimee-github.firebaseio.com/posts.json', data)
           .then(res => {
@@ -36,44 +35,50 @@ class NewPost extends Component {
                     }
                     //counter +=1;
                     //console.log("this is counter: ",counter);
-                    const newDataTitle = data.title;
-                    const newData = data.body;
                     const newDataAuthor = data.author;
                    //console.log("author: ", newDataAuthor);
                    //This gets the item into the container.
-                    this.state.postBody.push(newData);
-                    this.state.postTitle.push(newDataTitle);
                     this.state.postAuthor.push(newDataAuthor);
                     //console.log("this is posts", this.state.postBody);
                     // console.log("this is posts title", this.state.postTitle);
                     // this is a way to get it to API. Best to call it above...
                     //this.props.history.push('https://aimee-github.firebaseio.com/posts.json');
-                    this.setState({content:this.state.postBody,
-                                   title: this.state.postTitle, 
+                    this.setState({data:data, 
                                    author:this.state.postAuthor,
                                    submitted:true })
                 })        
     }   
     render () {
-        let title = this.state.title;
-        let body = this.state.content;
         let author = this.state.author;
+        
+        const submittedArray = [];
+        for ( let key in this.state.data) {
+            submittedArray.push( {
+                id: key,
+                config: this.state.data[key]
+            } );
+            console.log("this is submitted: ", submittedArray);
+        }
+        const showSubmitted = submittedArray.map(submittedElement => (
+            <div key={submittedElement.id}
+               value={submittedElement.config.value}>
+              <h3>{submittedElement.id}:</h3>
+               {submittedElement.config}
+               </div>)
+                )
         if (this.state.submitted) {
         return(<div>
             <NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
             <div className={classes.NewPost}>
             <span>Confirmed!</span>
-            <p>Thanks {author}! <br/>
-             You sent :</p>
-            <h3>Title:</h3>
-            {title}
-            <br/>
-            <h3>Content:</h3>
-            {body}
+            <p>Thanks {author}! </p>
+            <p> You sent :</p>
+            {showSubmitted}
             <br/>
             <h4>Cheers!</h4>
             </div>
-            </div>)
+            </div>
+                )
              }
         return (
             <div><NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
