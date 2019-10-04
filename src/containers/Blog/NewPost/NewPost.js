@@ -49,7 +49,7 @@ class NewPost extends Component {
                 })        
     }   
     render () {
-        let author = this.state.author;
+        const author = this.state.author;
         
         const submittedArray = [];
         for ( let key in this.state.data) {

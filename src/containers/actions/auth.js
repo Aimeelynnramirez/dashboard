@@ -29,12 +29,11 @@ export const auth = (email, password, isSignup) => {
         const authData = {
             email: email,
             password: password,
-            returnSecureToken: true
+            //returnSecureToken: true
         };
-        console.log("this is authData:", authData);
-        let url = 'https://aimee-github.firebaseio.com';
+        let url = 'https://aimee-github.firebaseio.com/sign-up.json';
         if (!isSignup) {
-            url = 'https://aimee-github.firebaseio.com';
+            url = 'https://aimee-github.firebaseio.com/sign-up.json';
         }
         axios.post(url, authData)
             .then(response => {
