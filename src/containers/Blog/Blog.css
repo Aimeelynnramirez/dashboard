@@ -1,7 +1,7 @@
 .Blog {
     display: inline-block;
-    width: 250px;
-    padding: 16px;
+    margin:10px;
+    width: 250px; 
     text-align: center;
     letter-spacing: 2px;
     border: 1px solid #eee;

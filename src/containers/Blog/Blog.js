@@ -4,7 +4,7 @@ import asyncComponent from '../../hoc/asyncComponent';
 // import NewPost from './NewPost/NewPost';
 import icon from '../../assets/goosepic.png';
 import classes from './Blog.css';
-
+import Auth from '../Auth/Auth';
 ///asyncNewPost here.
 const AsyncNewPost = asyncComponent(() => {
     return import('./NewPost/NewPost');
@@ -50,7 +50,10 @@ class Blog extends Component {
                     </div>)}/>
                     
                 </Switch>
-              
+                <div className={classes.Blog}>
+                <Auth/>
+                </div>
+                
                            
             </div>
         );
