@@ -51,7 +51,7 @@ class Blog extends Component {
                     
                 </Switch>
                 <div className={classes.Blog}>
-                <Auth/>
+                <Auth/> 
                 </div>
                 
                            
