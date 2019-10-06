@@ -2,19 +2,18 @@ import axios from 'axios';
 
 import * as actionTypes from './actionTypes';
 
+
 export const authStart = () => {
     return {
         type: actionTypes.AUTH_START
     };
 };
 
-export const authSuccess = (token, userId, email, password) => {
+export const authSuccess = (token, userId) => {
     return {
         type: actionTypes.AUTH_SUCCESS,
         idToken: token,
         userId: userId,
-        email: 'aimeelynnramirez@gmail.com',
-        password: password,
     };
 };
 
@@ -37,59 +36,68 @@ export const auth = (email, password, isSignup, token, userId) => {
         if (!isSignup) {
             url = 'https://aimee-github.firebaseio.com/sign-up.json';
         }
-    const getAuth = authData;
-       axios.post(url, authData)
-            .then((response, err) => {
+   // const getAuth = authData;
+   ///console.log(  dispatch(authSuccess(authData)))
+   return(dispatch(authSuccess(authData)))
+    /*   axios.post(url, authData)
+    .then(response => { 
+    console.log(  dispatch(authSuccess(authData)))
+   return( dispatch(authSuccess(authData)))
+    })
+      axios.post(url, authData)
+            .then(response => { 
+
                 if( getAuth === "" || authData.email === "" || authData.password === "") {
                    // console.log("this is empty")
-                    return axios.delete(url, authData);
-                    //return  !dispatch(authSuccess(response.data));
+                  // return axios.delete(url, authData);
                 }else if( getAuth === authData){  
-                    axios.get(url)
-                    .then(response => {
-                    //console.log("this is data", response.data);
+                     axios.get("https://aimee-github.firebaseio.com/sign-up.json", authData)
+                    .then(response => { 
                     const formElementsArray = [];
-                    for ( let key in response.data ) {
+                    for ( let key in authData ) {
                         formElementsArray.push( {
+                            key:formElementsArray.length,
                             id: key,
-                            config: response.data[key]
+                            config: authData[key]
                         } );
                     }
+                  console.log("this is data", formElementsArray);
+     
                    // console.log("this is get Auth", getAuth)
-                /*     const formFilter = formElementsArray.filter(formItem => {
-                        const deleteIt = formItem.config.email;
-                        return deleteIt;
-                       // console.log("this is form item", formItem.config.email);
-                    })  */
-                    const form = formElementsArray.map(formElement => {
-                       let storage = formElement.config.email;
-                     return storage
-                    })
-                    // i need to compare what is in storage to what had been inputted.
-                       // console.log("this is storage",form);
-                        for(let i = 0; i < form.length; i++){
-                            //const callIt= form.indexOf();
-                            const sliceIt = form.splice(i, 1);
-                            //console.log("this is each i :", sliceIt);
-                            if(sliceIt === form[i]){
-                                // try to delete
-                               console.log("this to remove it",form[i])
-                               console.log("this is array:", form);
-                             
-                                return delete form[i];
+                    const formFilter = formElementsArray.map(formItem => {
+
+                        let storage =  formItem;
+                     
+             if(getAuth.email ===  storage){
+             }
+                               // formElementsArray.push(formItem)
+ 
+                    
+                        //console.log("this is form item", deleteIt);
+                       
+                        for(let i = 1; i < formElementsArray.length; i++){
+                            console.log("this is storage for email: ", storage)
+                            console.log("this is array ",formElementsArray.length)
+                            console.log("this is array ",formElementsArray[i].config.email)
+
+                            if(formElementsArray[i].config.email == storage){
+                               // formElementsArray.split(formElementsArray[i]);
+                              // axios.delete(url, formElementsArray[i].id)
+                                console.log("this is split:", formElementsArray.key)
                             }
-                          /*   axios.delete(url).then(response =>{
-                                console.log(this.formFliter);
-                            }); */
+                            break;
                         }
-                    })
+                    }) 
+                 })
                 }
+               // return  dispatch(authSuccess(response.data));
+
             })
             .catch(err => {
-                console.log(err);
+                 console.log(err);
                 dispatch(authFail(err));
-            });
-            
+            }); 
+             */
         
     };
 };

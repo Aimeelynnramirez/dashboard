@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { Route, Link} from 'react-router-dom';
+import classes from './App.css';
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
-
-
+import Info from './Info';
 import * as actions from '../actions/index';
 
 class Auth extends Component {
     state = {
+        submitted:false,
+
         controls: {
             email: {
                 elementType: 'input',
@@ -38,7 +40,7 @@ class Auth extends Component {
                 },
                 valid: false,
                 touched: false
-            }
+            } 
         },
         isSignup: true
     }
@@ -72,7 +74,6 @@ class Auth extends Component {
 
         return isValid;
     }
-
     inputChangedHandler = ( event, controlName ) => {
         const updatedControls = {
             ...this.state.controls,
@@ -80,23 +81,32 @@ class Auth extends Component {
                 ...this.state.controls[controlName],
                 value: event.target.value,
                 valid: this.checkValidity( event.target.value, this.state.controls[controlName].validation ),
-                touched: true
+                touched: true,
+             
             }
         };
-        this.setState( { controls: updatedControls } );
+        this.setState( { controls: updatedControls} );
     }
-
     submitHandler = ( event ) => {
         event.preventDefault();
-        this.props.onAuth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup );
+        if(this.state.controls.email.value === ""){
+          alert("email  is empty, try again")
+          console.log("email is empty, try again.")
+          return null
+        }
+        if ( this.state.controls.password.value === ""){
+          alert(" password is empty, try again")
+          console.log("password is empty, try again.")
+           return null
+        }
+        this.setState({submitted:true})
+        this.props.onAuth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup, this.state.submitted );
     }
-
     switchAuthModeHandler = () => {
         this.setState(prevState => {
             return {isSignup: !prevState.isSignup};
         });
     }
-
     render () {
         const formElementsArray = [];
         for ( let key in this.state.controls ) {
@@ -106,7 +116,7 @@ class Auth extends Component {
             } );
         }
 
-        const form = formElementsArray.map(formElement => (
+        const form = formElementsArray.map(formElement => (    
             <Input
                 key={formElement.id}
                 elementType={formElement.config.elementType}
@@ -117,16 +127,31 @@ class Auth extends Component {
                 touched={formElement.config.touched}
                 changed={( event ) => this.inputChangedHandler( event, formElement.id )} />
         ) );
-
+ if(this.state.submitted){
+     return(
+         <div className={classes.App}>
+        <Route path={'/dashboard'}  component={Auth}/>
+         <p>Thanks for sending!</p>
+        </div>
+     )   
+ }
         return (
-            <div>
+            <div className={classes.App}>
+                <br/>   
+                <br/>
+                <p>Leave an email:</p>
                 <form onSubmit={this.submitHandler}>
                     {form}
                     <Button>send</Button>
                 </form>
-                <Button 
-                 clicked={this.switchAuthModeHandler}>{this.state.isSignup ? 'sign-in' : 'sign-up'}</Button>
+              {/*   <Button 
+                 clicked={this.switchAuthModeHandler}>{this.state.isSignup ? 'sign-in' : 'sign-up'}</Button> */}
+                 <br/>
+                 <br/>
+                 <Route path="/dashboard/info" component={Info}/>
+                  <Link to="/dashboard/info">?</Link>
             </div>
+            
         );
     }
 }

@@ -26,10 +26,13 @@ class Blog extends Component {
     render () {
         return (
             <div>
-                  <div className={classes.Link}> 
+                  <div className={classes.Nav}> 
+                  <br/>
                   <img alt="a pink logo" src= {icon}/> 
-                 |<Link to="/" onClick={this.githubLink}>Github</Link>|
-                  <Link to="/" onClick={this.twitterLink}>Twitter</Link>|  
+                  <br/>
+                  <Link to="/" onClick={this.githubLink}>Github</Link>
+                  <br/>
+                  <Link to="/" onClick={this.twitterLink}>Twitter</Link>
                   </div> 
                   <br/>
                 {/* <Route path="/" exact render={() => <h1>Home</h1>} />
@@ -40,19 +43,19 @@ class Blog extends Component {
                     <div className={classes.Blog}>
                            <h3>Hey, I'm Aimee.</h3>
                             <p>
-                             Kindly leave a comment below!
+                             Kindly leave a comment here!
                              </p>
                              <br/> 
                              <Link to={'/new-post'
                                // hash: '#submit',
                                // search: '?quick-submit=true'
                             }>Comment</Link>  
+                            <hr/>
+                            <Auth/>  
                     </div>)}/>
-                    
+                  
                 </Switch>
-                <div className={classes.Blog}>
-                <Auth/> 
-                </div>
+               
                 
                            
             </div>

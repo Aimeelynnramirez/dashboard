@@ -33,7 +33,7 @@
     }
 }
 
-.NewPost button {
+ button {
     margin: 5px 0;
     padding: 10px;
     font: inherit;
@@ -44,8 +44,8 @@
     color:   #fd03b2;
 }
 
-.NewPost button:hover,
-.NewPost button:active {
+button:hover,
+button:active {
     color: white;
     background-color: #fd03b2;
 }
@@ -59,16 +59,13 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
-a{
-    padding: 10px;
-    text-decoration:none;
-    letter-spacing: 2px;
-    color: black;
-}
- a:hover{
-    text-decoration:underline overline;
-    color:  #fd03b2;
+
+ a{
+    color:green;
+    margin: 10px auto;
+   
 }
 h4{
+    
     letter-spacing: 2px;
 }

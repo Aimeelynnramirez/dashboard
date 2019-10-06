@@ -9,11 +9,11 @@ class App extends Component {
       <BrowserRouter>
         <div className={classes.App}>
           <Blog />
-        </div>
         <div style={{padding:'2rem', 
                     letterSpacing:'2px', 
-                    position:'sticky'}}>
+                    position:'fixed'}}>
                     aimeelynn.</div>
+                    </div>
       </BrowserRouter>
     );
   }

@@ -81,10 +81,12 @@ class NewPost extends Component {
                 )
              }
         return (
-            <div><NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
+            <div>
+           <NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
             <div className={classes.NewPost}>
                 <br/>
-                <h1>Add a Post</h1>
+                <h3>Add a Post</h3>
+                <hr/>
                 <label>Title</label>
                 <input type="text" value={this.state.title} onChange={(event) => this.setState({title: event.target.value})} />
                 <label>Content</label>
@@ -92,7 +94,9 @@ class NewPost extends Component {
                 <label>Author</label>
                 <input placeholder="Aimee" value={this.state.author} onChange={(event) => this.setState({author: event.target.value})}/>
                 <button onClick={()=> {if(window.confirm('Are you sure you want to send this comment?')) this.postDataHandler()}}>Add Post</button>
+   
                 </div>
+                
             </div>
         );
     }

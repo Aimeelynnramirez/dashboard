@@ -1,15 +1,27 @@
-.Blog {
+.Nav {
+
+    width:100px; 
+    height: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+ 
+ 
+}
+.Blog{
     display: inline-block;
     margin:10px;
-    width: 250px; 
+    width:300px; 
+    height: 100%;
     text-align: center;
     letter-spacing: 2px;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
     box-sizing: border-box;
+ 
 }
+
 img{
-    float: right;
+  
     width:30px;
     height:30px;
 }
@@ -27,6 +39,7 @@ img:hover{
 }
 a{
     padding: 10px;
+
     text-decoration:none;
     letter-spacing: 2px;
     color: black;
