@@ -2,18 +2,17 @@ import axios from 'axios';
 
 import * as actionTypes from './actionTypes';
 
-
 export const authStart = () => {
     return {
         type: actionTypes.AUTH_START
     };
 };
 
-export const authSuccess = (token, userId) => {
+export const authSuccess = (token, userId, email, password) => {
     return {
         type: actionTypes.AUTH_SUCCESS,
         idToken: token,
-        userId: userId,
+        userId: userId
     };
 };
 
@@ -26,7 +25,7 @@ export const authFail = (error) => {
 
 export const auth = (email, password, isSignup, token, userId) => {
     return dispatch => {
-        dispatch(authStart() || authFail());
+        dispatch(authStart());
         const authData = {
             email: email,
             password: password,
@@ -36,68 +35,65 @@ export const auth = (email, password, isSignup, token, userId) => {
         if (!isSignup) {
             url = 'https://aimee-github.firebaseio.com/sign-up.json';
         }
-   // const getAuth = authData;
-   ///console.log(  dispatch(authSuccess(authData)))
-   return(dispatch(authSuccess(authData)))
-    /*   axios.post(url, authData)
-    .then(response => { 
-    console.log(  dispatch(authSuccess(authData)))
-   return( dispatch(authSuccess(authData)))
-    })
-      axios.post(url, authData)
-            .then(response => { 
-
+    const getAuth = authData;
+       axios.post(url, authData)
+            .then(response => {
+                dispatch(authSuccess(response.data));
                 if( getAuth === "" || authData.email === "" || authData.password === "") {
-                   // console.log("this is empty")
-                  // return axios.delete(url, authData);
+                    return axios.delete(url, authData);
                 }else if( getAuth === authData){  
-                     axios.get("https://aimee-github.firebaseio.com/sign-up.json", authData)
-                    .then(response => { 
+                    dispatch(authSuccess(response.data));
+                    axios.get(url)
+                    .then(response => {
+                   // console.log("this is data", response.data);
                     const formElementsArray = [];
-                    for ( let key in authData ) {
+                    for ( let key in response.data ) {
                         formElementsArray.push( {
-                            key:formElementsArray.length,
                             id: key,
-                            config: authData[key]
+                            config: response.data[key]
                         } );
                     }
-                  console.log("this is data", formElementsArray);
-     
+          console.log("this is data array: ", formElementsArray)
                    // console.log("this is get Auth", getAuth)
-                    const formFilter = formElementsArray.map(formItem => {
+                   const formMatch = formElementsArray.map(selectedEmail=> {
+                    let storage = selectedEmail.config.email;
 
-                        let storage =  formItem;
-                     
-             if(getAuth.email ===  storage){
-             }
-                               // formElementsArray.push(formItem)
- 
-                    
-                        //console.log("this is form item", deleteIt);
-                       
-                        for(let i = 1; i < formElementsArray.length; i++){
-                            console.log("this is storage for email: ", storage)
-                            console.log("this is array ",formElementsArray.length)
-                            console.log("this is array ",formElementsArray[i].config.email)
+                    return storage;
 
-                            if(formElementsArray[i].config.email == storage){
-                               // formElementsArray.split(formElementsArray[i]);
-                              // axios.delete(url, formElementsArray[i].id)
-                                console.log("this is split:", formElementsArray.key)
-                            }
-                            break;
-                        }
-                    }) 
                  })
-                }
-               // return  dispatch(authSuccess(response.data));
+               
+                console.log(...formMatch);
 
+                    const form = formElementsArray.map(formElement => {
+                       let storage = formElement.config.email;
+                       //console.log(matchIt);
+                       
+                       for(let i = 0; i < formMatch.length;i++){
+                     //console.log("i: " , formMatch[i])
+                       console.log("this is match", storage)
+                       console.log("this is match", formMatch[i])  
+                      const find = storage != formMatch[i]
+                      console.log("this is find:", find);
+                      if( storage === formMatch[i] && i > 0) {
+                        console.log("these are email array :", find)
+                        formMatch.pop();
+                        console.log(formMatch)
+                        return;
+                    }     
+                    }
+                    
+               
+                    })
+       
+   
+                    })
+                }
             })
             .catch(err => {
-                 console.log(err);
+                console.log(err);
                 dispatch(authFail(err));
-            }); 
-             */
+            });
+            
         
     };
 };

@@ -16,7 +16,6 @@ class Info extends Component {
        //console.log(this.props);  
     }
     getMoreInfo = ()=>{
-      
          this.setState({submitted:true})
     }
    

@@ -89,7 +89,7 @@ class Auth extends Component {
     }
     submitHandler = ( event ) => {
         event.preventDefault();
-        if(this.state.controls.email.value === ""){
+    /*     if(this.state.controls.email.value === ""){
           alert("email  is empty, try again")
           console.log("email is empty, try again.")
           return null
@@ -99,9 +99,12 @@ class Auth extends Component {
           console.log("password is empty, try again.")
            return null
         }
-        this.setState({submitted:true})
+
+  */
+ console.log("this is clicked")
         this.props.onAuth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup, this.state.submitted );
-    }
+    
+}
     switchAuthModeHandler = () => {
         this.setState(prevState => {
             return {isSignup: !prevState.isSignup};
