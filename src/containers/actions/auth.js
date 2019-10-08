@@ -77,14 +77,18 @@ export const auth = (email, password, isSignup, token, userId) => {
                         const copyDelete = [];
                         //const copy = [];
                        for(let i = 0;  i < formMatch.length; i++){
-                        console.log("this is number:", parseInt(number[i]))
-
+                     //  console.log("this is number:", parseInt(number[i]))
                             copyDelete.push(formMatch[i]);
                           } 
                             formMatch.forEach((item, i) => {
-                                let length = parseInt(number[i])
-                                 if(i > 0){
-                                if(item == copyDelete[length-1] || item == copyDelete[0]){
+                                let length = Number(number[i]);
+                                //console.log(length)
+                                //let newI = i + 1;
+                                let j = length - 1;
+                                let a = length - 2;
+                             // console.log(newI)
+                             if(i > 0){
+                                if(item === copyDelete[j] || item === copyDelete[0] || item === copyDelete[a]){
                                    //console.log("this", copyDelete[length-1])
                                    // console.log("this", item)
                                     alert("stop! you already send this email.")
@@ -95,7 +99,7 @@ export const auth = (email, password, isSignup, token, userId) => {
                                   //console.log("this is item ", item)
                                   //copy.push(item);
                                   //console.log("this is copy",[copy]
-                                  if( i > 2)  {
+                                  if( i > 3)  {
                                       alert("sorry database is full")
                                       return null;
                                   }                   
