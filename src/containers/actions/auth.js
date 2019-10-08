@@ -70,40 +70,27 @@ export const auth = (email, password, isSignup, token, userId) => {
 
                  })
                 //console.log(formMatch);
+                     const number = Object.keys(formMatch)
+
 
                     //console.log("form map: " , [...formMatch]
                         const copyDelete = [];
                         //const copy = [];
                        for(let i = 0;  i < formMatch.length; i++){
+                        console.log("this is number:", parseInt(number[i]))
+
                             copyDelete.push(formMatch[i]);
                           } 
                             formMatch.forEach((item, i) => {
+                                let length = parseInt(number[i])
                                  if(i > 0){
-                                if(item == copyDelete[0]){
+                                if(item == copyDelete[length-1] || item == copyDelete[0]){
+                                   //console.log("this", copyDelete[length-1])
+                                   // console.log("this", item)
                                     alert("stop! you already send this email.")
                                     let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
                                     axios.delete(userArray); 
                                     console.log(userArray);
-                                }
-                               // copy.push(formMatch[i])
-                                if(item == copyDelete[1]){
-                                   if(i > 1 ){
-                                    alert("you already send this email.")
-                                    let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
-                                    axios.delete(userArray); 
-                                    console.log(userArray);
-                                   }                     
-                                }
-                                if(item == copyDelete[2]){
-                                   // console.log("this is 2:", item)
-                                    //console.log("this is 2:",copyDelete[1])
-                                    //console.log("this is 2:",formMatch[i])
-                                   if(i > 2 ){
-                                    alert("you already send this email.")
-                                    let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
-                                    axios.delete(userArray); 
-                                    console.log(userArray);
-                                   }        
                                 }
                                   //console.log("this is item ", item)
                                   //copy.push(item);
