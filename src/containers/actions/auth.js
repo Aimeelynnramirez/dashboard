@@ -39,9 +39,7 @@ export const auth = (email, password, isSignup, token, userId) => {
        axios.post(url, authData)
             .then(response => {
                 dispatch(authSuccess(response.data));
-                if( getAuth === "" || authData.email === "" || authData.password === "") {
-                    return axios.delete(url, authData);
-                }else if( getAuth === authData){  
+                  if( getAuth === authData){  
                     dispatch(authSuccess(response.data));
                     axios.get(url)
                     .then(response => {
@@ -53,39 +51,109 @@ export const auth = (email, password, isSignup, token, userId) => {
                             config: response.data[key]
                         } );
                     }
-          console.log("this is data array: ", formElementsArray)
+                   //console.log("this is data array: ", formElementsArray)
                    // console.log("this is get Auth", getAuth)
                    const formMatch = formElementsArray.map(selectedEmail=> {
                     let storage = selectedEmail.config.email;
+                    return storage;
 
+                 })
+                 const formMatchId = formElementsArray.map(selectedId=> {
+                    let storage = selectedId.id;
                     return storage;
 
                  })
                
-                console.log(...formMatch);
+                 const formMatchPass = formElementsArray.map(selectedPass=> {
+                    let storage = selectedPass.config.password;
+                    return storage;
 
-                    const form = formElementsArray.map(formElement => {
-                       let storage = formElement.config.email;
-                       //console.log(matchIt);
-                       
-                       for(let i = 0; i < formMatch.length;i++){
-                     //console.log("i: " , formMatch[i])
-                       console.log("this is match", storage)
-                       console.log("this is match", formMatch[i])  
-                      const find = storage != formMatch[i]
-                      console.log("this is find:", find);
-                      if( storage === formMatch[i] && i > 0) {
-                        console.log("these are email array :", find)
-                        formMatch.pop();
-                        console.log(formMatch)
-                        return;
-                    }     
-                    }
+                 })
+                //console.log(formMatch);
+
+                    //console.log("form map: " , [...formMatch]
+                        const copyDelete = [];
+                        //const copy = [];
+                       for(let i = 0;  i < formMatch.length; i++){
+                            copyDelete.push(formMatch[i]);
+                          } 
+                            formMatch.forEach((item, i) => {
+                                 if(i > 0){
+                                if(item == copyDelete[0]){
+                                    alert("stop! you already send this email.")
+                                    let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
+                                    axios.delete(userArray); 
+                                    console.log(userArray);
+                                }
+                               // copy.push(formMatch[i])
+                                if(item == copyDelete[1]){
+                                   if(i > 1 ){
+                                    alert("you already send this email.")
+                                    let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
+                                    axios.delete(userArray); 
+                                    console.log(userArray);
+                                   }                     
+                                }
+                                if(item == copyDelete[2]){
+                                   // console.log("this is 2:", item)
+                                    //console.log("this is 2:",copyDelete[1])
+                                    //console.log("this is 2:",formMatch[i])
+                                   if(i > 2 ){
+                                    alert("you already send this email.")
+                                    let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
+                                    axios.delete(userArray); 
+                                    console.log(userArray);
+                                   }        
+                                }
+                                  //console.log("this is item ", item)
+                                  //copy.push(item);
+                                  //console.log("this is copy",[copy]
+                                  if( i > 2)  {
+                                      alert("sorry database is full")
+                                      return null;
+                                  }                   
+                                }
+                                if( formMatch[i] === "" || formMatchPass[i] === "") {
+                                    alert("this is empty!")
+                                    let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
+                                    axios.delete(userArray); 
+                                    console.log(userArray);
+                                    return null;
+                                }
+  
+                        })
+                        
+                        
+
+                
                     
-               
-                    })
-       
+  
+
+                       
    
+        
+                             /*  let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
+                              axios.delete(userArray);
+                              console.log("this is form array: ", userArray)
+                              break; */
+           /*                  if(storage == formMatch[i] && formElementsArray.length > 1 ){
+                                console.log("this is i: ", i);
+                                console.log("this is storage i: ", storage);
+                                console.log("this is  formMatch i: ", formMatch[i]);
+        
+                                    let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
+                                    axios.delete(userArray);
+                                    //userArray.remove();
+                                    console.log("this is form array: ", userArray)
+                                 */
+                             //return find;
+                        
+                        
+                    
+    
+                 
+//console.log("this is true or false", form);
+               
                     })
                 }
             })
