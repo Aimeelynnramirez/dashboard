@@ -22,6 +22,17 @@
         transform: rotateY(360deg);
     }
 }
+.Nav button{
+    font-size: 1.05rem;
+    color:#ffae00;
+    background-color: transparent;
+    border:none;
+}
+.Nav button:hover{
+    color: #fd03b2;
+    background-color: transparent;
+}
+
 .Blog{
     display: inline-block;
     margin:10px;
@@ -34,6 +45,7 @@
     box-sizing: border-box; 
 
 }
+
 .Blog img{
     width: 100%;
 }

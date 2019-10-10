@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route, Link} from 'react-router-dom';
-import classes from './App.css';
+import classes from './Auth.css';
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import Info from './Info';
@@ -133,14 +133,14 @@ class Auth extends Component {
         ) );
  if(this.state.submitted){
      return(
-         <div className={classes.App}>
+         <div className={classes.Auth}>
         <Route path={'/dashboard'}  component={Auth}/>
          <p>Thanks for sending!</p>
         </div>
      )   
  }
         return (
-            <div className={classes.App}>
+            <div className={classes.Auth}>
                 <br/>   
                 <br/>
                 <p>Leave an email:</p>

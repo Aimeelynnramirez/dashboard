@@ -1,4 +1,4 @@
-button {
+.Auth button {
   margin: 5px 0;
   padding: 10px;
   font: inherit;
@@ -8,8 +8,8 @@ button {
   background-color: transparent;
   color:   #fd03b2;
 }
- button:hover,
- button:active {
+.Auth button:hover,
+.Auth button:active {
     color: white;
     background-color: #fd03b2;
 }

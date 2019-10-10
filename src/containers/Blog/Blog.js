@@ -53,10 +53,10 @@ class Blog extends Component {
                   <Link to="/" onClick={this.twitterLink}>Twitter</Link>
                   <br/>
                   <p>Click on The Heart to switch from Dark Mode to Light Mode.</p>
-                  <Link to={'/dashboard'}
+                  <button
                   onClick ={this.switchBgModeHandler}>
                   {this.state.changeColorBg ? '♥' : '♡'}
-                  </Link>
+                  </button>
                   </div> 
                 
                 <br/>

@@ -34,7 +34,7 @@
     }
 }
 
- button {
+ .NewPost button {
     margin: 5px 0;
     padding: 10px;
     font: inherit;
@@ -45,8 +45,8 @@
     color:   #fd03b2;
 }
 
-button:hover,
-button:active {
+.NewPost button:hover,
+.NewPost button:active {
     color: white;
     background-color: #fd03b2;
 }
