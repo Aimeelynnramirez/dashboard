@@ -52,11 +52,14 @@ class Blog extends Component {
                   <br/>
                   <Link to="/" onClick={this.twitterLink}>Twitter</Link>
                   <br/>
-                  <p>Click on The Heart to switch from Dark Mode to Light Mode.</p>
+                  <p>Turn to
+                   <br/>
                   <button
                   onClick ={this.switchBgModeHandler}>
-                  {this.state.changeColorBg ? '♥' : '♡'}
+                  {this.state.changeColorBg ? '☾' : '☼'}
                   </button>
+                  <br/>
+                  Mode.</p>
                   </div> 
                 
                 <br/>
