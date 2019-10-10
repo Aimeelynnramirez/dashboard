@@ -31,9 +31,9 @@ export const auth = (email, password, isSignup, token, userId) => {
             password: password,
             returnSecureToken: true
         };
-        let url = 'https://aim-application-backend.herokuapp.com/';
+        let url = 'https://aimee-github.firebaseio.com/sign-up.json';
         if (!isSignup) {
-            url = 'https://aim-application-backend.herokuapp.com/';
+            url = 'https://aimee-github.firebaseio.com/sign-up.json';
         }
     const getAuth = authData;
        axios.post(url, authData)
@@ -68,7 +68,7 @@ export const auth = (email, password, isSignup, token, userId) => {
                     return storage2;
 
                  })
-                 console.log(formMatchPass)
+                 
 
                 const wrapper = () => {
                   
