@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://aimee-github.firebaseio.com'
+    baseURL: 'https://aim-application-backend.herokuapp.com/'
 });
 
 export default instance;
