@@ -103,7 +103,7 @@ export const auth = (email, password, isSignup, token, userId) => {
                         
                                     if(!formBool && !formBoolPass && i > 0){
                                         alert("looks like you already send this email.")
-                                        let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i-1]}.json`;
+                                        let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[formMatch.length-1]}.json`;
                                         axios.delete(userArray); 
                                     }
                                     if(!formBool && formBoolPass && i > 0){
