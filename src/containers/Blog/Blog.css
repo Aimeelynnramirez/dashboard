@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
 .Nav {
-
     width:100px; 
     height: 100%;
     text-align: center;
     letter-spacing: 2px;
- 
- 
 }
 .Blog{
     display: inline-block;
@@ -16,12 +15,9 @@
     letter-spacing: 2px;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
-    box-sizing: border-box;
- 
+    box-sizing: border-box; 
 }
-
-img{
-  
+img{ 
     width:30px;
     height:30px;
 }
@@ -37,13 +33,17 @@ img:hover{
         transform: rotateY(360deg);
     }
 }
+span{
+    font-family: 'Sacramento', cursive;
+    font-size:2rem;
+}
+
 a{
     padding: 10px;
-
+    font-family: 'Playfair Display', serif;
     text-decoration:none;
     letter-spacing: 2px;
-    color: black;
-
+    color:#00a17e;
 }
  a:hover{
     text-decoration:underline overline;

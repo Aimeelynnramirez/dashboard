@@ -9,15 +9,3 @@
     box-sizing: border-box;
     overflow-y:scroll;
   }
-  a{
-    padding: 100px;
-    
-    text-decoration:none;
-    letter-spacing: 2px;
-    color: black;
-
-}
- a:hover{
-    text-decoration:underline overline;
-    color:  #fd03b2;
-}

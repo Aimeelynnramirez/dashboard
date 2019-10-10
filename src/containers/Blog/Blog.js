@@ -25,15 +25,17 @@ class Blog extends Component {
         document.location.replace('https://twitter.com/aimeelramirez');
     }
      switchBgModeHandler = () => {
-        document.body.style.color= '#f5f5f5';
-        document.body.style.backgroundColor = '#222222';
+       document.body.style.cssText=`color:#f5f5f5;
+       background-color:#222222
+     `;
+
         this.setState(prevState => {
             return {changeColorBg: !prevState.changeColorBg};
         });
         if(!this.state.changeColorBg){
-            document.body.style.backgroundColor = '#ffffff';
-            document.body.style.color= '#000000';
-
+            document.body.style.cssText=`color:#000000;
+            background-color:#ffffff
+          `;
         }
     }
   
@@ -58,7 +60,11 @@ class Blog extends Component {
                     {this.state.importPosts ? <Route path="/new-post" component={AsyncNewPost} /> : null}
                     <Route render={() => (
                     <div className={classes.Blog}>
-                           <h3>Hey, I'm Aimee.</h3>
+                        <p>Hey, my name is Aimee.
+                            <br/>
+                            In the truest words: 
+                            <br/>"Dust yourself off, and try again"</p>
+                           <span>faith, hope and love.</span>
                             <p>
                              Kindly leave a comment here!
                              </p>
