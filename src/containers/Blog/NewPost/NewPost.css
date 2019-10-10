@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 .NewPost {
-    width: 250px;
+    width: 300px;
     margin: 20px auto;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
@@ -51,12 +51,13 @@ button:active {
     background-color: #fd03b2;
 }
 
- a{
-    letter-spacing:1px;
-    color:#00a17e;
+
+a{
+    padding: 10px;
     font-family: 'Playfair Display', serif;
-    margin: 10px auto;
-   
+    text-decoration:none;
+    letter-spacing: 2px;
+    color:#fcad03;
 }
 h4{
     

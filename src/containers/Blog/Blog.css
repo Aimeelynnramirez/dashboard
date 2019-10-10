@@ -10,18 +10,19 @@
     display: inline-block;
     margin:10px;
     width:300px; 
-    height: 100%;
+    height: 80%;
     text-align: center;
     letter-spacing: 2px;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
     box-sizing: border-box; 
+
 }
-img{ 
+.Nav img{ 
     width:30px;
     height:30px;
 }
-img:hover{
+.Nav img:hover{
     animation: spinning-icon linear 2s infinite;
 }
 @keyframes spinning-icon {
@@ -43,9 +44,12 @@ a{
     font-family: 'Playfair Display', serif;
     text-decoration:none;
     letter-spacing: 2px;
-    color:#00a17e;
+    color:#ffae00;
 }
  a:hover{
     text-decoration:underline overline;
     color:  #fd03b2;
+}
+p{
+ font-size:12px;
 }

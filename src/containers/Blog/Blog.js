@@ -5,6 +5,7 @@ import asyncComponent from '../../hoc/asyncComponent';
 import icon from '../../assets/goosepic.png';
 import classes from './Blog.css';
 import Auth from '../Auth/Auth';
+import Footer from '../Footer/Footer';
 ///asyncNewPost here.
 const AsyncNewPost = asyncComponent(() => {
     return import('./NewPost/NewPost');
@@ -21,14 +22,15 @@ class Blog extends Component {
     githubLink=() =>{
         document.location.replace('https://github.com/Aimeelynnramirez');
     }
+
     twitterLink=() =>{
         document.location.replace('https://twitter.com/aimeelramirez');
     }
+
      switchBgModeHandler = () => {
        document.body.style.cssText=`color:#f5f5f5;
        background-color:#222222
      `;
-
         this.setState(prevState => {
             return {changeColorBg: !prevState.changeColorBg};
         });
@@ -49,41 +51,45 @@ class Blog extends Component {
                   <Link to="/" onClick={this.githubLink}>Github</Link>
                   <br/>
                   <Link to="/" onClick={this.twitterLink}>Twitter</Link>
-                  
-                  </div> 
-                  <button to={'/dashboard'}
-                             onClick ={this.switchBgModeHandler}>{this.state.changeColorBg ? 'Change to Dark Mode' : 'Change to Light Mode'}</button>
                   <br/>
-                {/* <Route path="/" exact render={() => <h1>Home</h1>} />
-                <Route path="/" render={() => <h1>Home 2</h1>} /> */}
+                  <p>Click on The Heart to switch from Dark Mode to Light Mode.</p>
+                  <Link to={'/dashboard'}
+                  onClick ={this.switchBgModeHandler}>
+                  {this.state.changeColorBg ? '♥' : '♡'}
+                  </Link>
+                  </div> 
+                
+                <br/>
                 <Switch>
                     {this.state.importPosts ? <Route path="/new-post" component={AsyncNewPost} /> : null}
+                   
                     <Route render={() => (
+                <div> 
+            <div className={classes.Blog}>
+            <Footer/>
+                </div>
                     <div className={classes.Blog}>
-                        <p>Hey, my name is Aimee.
-                            <br/>
-                            In the truest words: 
-                            <br/>"Dust yourself off, and try again"</p>
                            <span>faith, hope and love.</span>
+                           <p>Hey, my name is Aimee.</p>
                             <p>
                              Kindly leave a comment here!
+                             <br/>
+                             🕷🎃🦇
                              </p>
-                             <br/> 
                              <Link to={'/new-post'
                                // hash: '#submit',
                                // search: '?quick-submit=true'
                             }>Comment</Link> 
                             <br/>
-                            
                             <hr/>
-                            <Auth/>  
+                            <Auth/>   
+                            </div> 
                     </div>)}/>
-                  
                 </Switch>
+    
                
-                
-                           
             </div>
+            
         );
     }
 }

@@ -1,0 +1,22 @@
+.Footer {
+    margin: 0;
+}
+.Footer img{
+    height:280px;
+    width:200px;
+    box-sizing: border-box; 
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+
+}
+.Footer p{
+    margin: 10%;
+    padding: 1em;
+    font-family: 'Playfair Display', serif;
+    width:80%; 
+    height: 80%;
+    letter-spacing: 2px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    box-sizing: border-box; 
+}
