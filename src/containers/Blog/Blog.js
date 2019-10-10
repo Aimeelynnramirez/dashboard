@@ -81,8 +81,8 @@ class Blog extends Component {
                                // search: '?quick-submit=true'
                             }>Comment</Link> 
                             <br/>
-                            <hr/>
-                            <Auth/>   
+                            <img src="https://i.imgur.com/CV4ujQq.jpg" alt="flowers and side by side artwork comparison"/>  
+                            <Auth/> 
                             </div> 
                     </div>)}/>
                 </Switch>
