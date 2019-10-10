@@ -5,7 +5,7 @@ import asyncComponent from '../../hoc/asyncComponent';
 import icon from '../../assets/goosepic.png';
 import classes from './Blog.css';
 import Auth from '../Auth/Auth';
-import Footer from '../Footer/Footer';
+//import Footer from '../Footer/Footer';
 ///asyncNewPost here.
 const AsyncNewPost = asyncComponent(() => {
     return import('./NewPost/NewPost');
@@ -65,9 +65,9 @@ class Blog extends Component {
                    
                     <Route render={() => (
                 <div> 
-            <div className={classes.Blog}>
+            {/*    <div className={classes.Blog}>
             <Footer/>
-                </div>
+                </div> */}
                     <div className={classes.Blog}>
                            <span>faith, hope and love.</span>
                            <p>Hey, my name is Aimee.</p>
