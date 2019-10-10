@@ -36,7 +36,7 @@ export const auth = (email, password, isSignup, token, userId) => {
             url = 'https://aim-application-backend.herokuapp.com';
         }
     const getAuth = authData;
-       axios({url : url + '/users',  method: 'POST',
+       axios({url : url + '/sign-up',  method: 'POST',
        data: authData,})
             .then(response => {
                 console.log(response.data)
