@@ -78,6 +78,13 @@ export const auth = (email, password, isSignup, token, userId) => {
                           copyDelete.push(formMatch[a]);
                           } 
      
+                          const copyDeletePass = [];
+
+                          for(let j = 0;  j < formMatch.length; j++){
+  
+                            copyDeletePass.push(formMatchPass[j]);
+                            } 
+       
                             /* formMatch.forEach((item, i) => { */
                                 for(let i = 0;  i < formMatch.length; i++){
                                 //counterIndex += 1;
@@ -90,13 +97,21 @@ export const auth = (email, password, isSignup, token, userId) => {
                                     state.push(obj)
                                 }
                                     let formBool =  formMatch[formMatch.length-1] !== copyDelete[i-1];
+                                    let formBoolPass =  formMatchPass[formMatchPass.length-1] !== copyDeletePass[i-1];
 
                                    const getOnce = () => {
                         
-                                    if(!formBool && i > 0){
+                                    if(!formBool && !formBoolPass && i > 0){
                                         alert("looks like you already send this email.")
                                         let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i-1]}.json`;
                                         axios.delete(userArray); 
+                                    }
+                                    if(!formBool && formBoolPass && i > 0){
+                                        alert("did you forget your password? try again.")
+                                        let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[formMatch.length-1]}.json`;
+                                        axios.delete(userArray); 
+                                        return null;
+                                        
                                     }
                                    }
                                    getOnce()
