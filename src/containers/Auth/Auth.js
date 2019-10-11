@@ -4,12 +4,15 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import NewPost from '../Blog/NewPost/NewPost.js';
 import './Auth.css';
+import REACT_APP_API_KEY from '../../components/env';
 // Configure Firebase.
+
+const API_KEY = REACT_APP_API_KEY;
 const config = {
-  apiKey: 'AIzaSyDQxbmedDjHtBfjMaOiA2jF7XWGhZOm0QU',
+  apiKey: API_KEY,
   
  // databaseURL:  'aimee-github.firebaseio.com',
-  authDomain: 'https://aimee-github.firebaseio.com'
+  authDomain: 'aimee-github.firebaseio.com'
   // ...
 };
 firebase.initializeApp(config);
