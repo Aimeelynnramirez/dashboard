@@ -4,7 +4,7 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import NewPost from '../Blog/NewPost/NewPost.js';
 import classes from './Auth.css';
-import REACT_APP_API_KEY from '../../components/config_keys';
+import REACT_APP_API_KEY from '../../components/config-keys.js';
 
 
 const API_KEY = REACT_APP_API_KEY;
