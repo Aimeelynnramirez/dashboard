@@ -1,7 +1,8 @@
 .Auth button {
   margin: 5px 0;
   padding: 10px;
-  font: inherit;
+  font-family: 'Playfair Display', serif;
+
   letter-spacing: 2px;
   border: 1px solid #ac5391;
   border-radius: 55px;
@@ -12,4 +13,8 @@
 .Auth button:active {
     color: white;
     background-color: #fd03b2;
+}
+.Auth p{
+  font-family: 'Playfair Display', serif;
+  font-size:1rem;
 }

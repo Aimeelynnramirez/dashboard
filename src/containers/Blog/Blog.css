@@ -49,9 +49,9 @@
 .Blog img{
     width: 100%;
 }
-span{
-    font-family: 'Sacramento', cursive;
-    font-size:2rem;
+.Blog span{
+    font-family: 'Playfair Display', serif;
+    font-size:1.2rem;
 }
 
 a{

@@ -1,6 +1,9 @@
 import axios from 'axios';
 
 import * as actionTypes from './actionTypes';
+//import firebase from 'firebase';
+
+const firebase = require('firebase/app');
 
 export const authStart = () => {
     return {
@@ -26,6 +29,7 @@ export const authFail = (error) => {
 export const auth = (email, password, isSignup, token, userId) => {
     return dispatch => {
         dispatch(authStart());
+      
         const authData = {
             email: email,
             password: password,
@@ -35,6 +39,7 @@ export const auth = (email, password, isSignup, token, userId) => {
         if (!isSignup) {
             url = 'https://aimee-github.firebaseio.com/sign-up.json';
         }
+      
     const getAuth = authData;
        axios.post(url, authData)
             .then(response => {
