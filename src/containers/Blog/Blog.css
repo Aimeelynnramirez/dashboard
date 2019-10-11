@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
-.Nav {
-    width:100px; 
-    height: 100%;
-    text-align: center;
-    letter-spacing: 2px;
-}
+
 .Nav img{ 
     width:30px;
     height:30px;
