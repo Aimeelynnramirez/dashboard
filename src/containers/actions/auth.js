@@ -31,21 +31,17 @@ export const auth = (email, password, isSignup, token, userId) => {
             password: password,
             returnSecureToken: true
         };
-        let url = 'https://aim-application-backend.herokuapp.com';
+        let url = 'https://aimee-github.firebaseio.com/sign-up.json';
         if (!isSignup) {
-            url = 'https://aim-application-backend.herokuapp.com';
+            url = 'https://aimee-github.firebaseio.com/sign-up.json';
         }
     const getAuth = authData;
-       axios({url : url + '/sign-up',  method: 'POST',
-       data: authData,})
+       axios.post(url, authData)
             .then(response => {
-                console.log(response.data)
-
                   if( getAuth === authData){  
-                    dispatch(authSuccess(response.json()));
-                    axios.get(url, '/sign-up')
+                    dispatch(authSuccess(response.data));
+                    axios.get(url)
                     .then(response => {
-                    console.log(response.json())
 
                     const formElementsArray = [];
                     for ( let key in response.data ) {
@@ -72,7 +68,6 @@ export const auth = (email, password, isSignup, token, userId) => {
                     return storage2;
 
                  })
-                 
 
                 const wrapper = () => {
                   
