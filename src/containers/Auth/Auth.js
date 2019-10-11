@@ -5,7 +5,7 @@ import firebase from 'firebase';
 import classes from './Auth.css';
 // Configure Firebase.
 const config = {
-  apiKey: process.env.REACT_APP_API_KEY,
+  apiKey: 'AIzaSyD2iEr5cu3IwPQ3Q_pEmjmZchxvqS0MLPA',
  // databaseURL:  'aimee-github.firebaseio.com',
   authDomain: 'https://aimee-github.firebaseio.com'
   // ...
@@ -16,7 +16,7 @@ firebase.initializeApp(config);
 // Configure FirebaseUI.
 const uiConfig = {
   signInFlow: 'popup',
-  signInSuccessUrl:'/sign-in',
+  signInSuccessUrl:'/dashboard/new-post',
   signInOptions: [
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
     firebase.auth.PhoneAuthProvider.PROVIDER_ID,
