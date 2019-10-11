@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classes from './NewPost.css';
 import axios from 'axios';
-import { NavLink } from 'react-router-dom';
+import Info from '../../Auth/Info.js';
+import { NavLink, Link, Route } from 'react-router-dom';
 
 
 class NewPost extends Component {
@@ -82,8 +83,16 @@ class NewPost extends Component {
                 )
              }
         return (
-            <div>
-           <NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
+            <div >
+                <div className={classes.NewPost}>
+         <Route path="/dashboard/Info" component={Info} />
+           <Link to={'/dashboard/Info'
+                               // hash: '#submit',
+                               // search: '?quick-submit=true'
+                            }>Info</Link> 
+                            <br/>
+                            👻
+                            </div>
             <div className={classes.NewPost}>
                 <br/>
                 <h3>Add a Post</h3>

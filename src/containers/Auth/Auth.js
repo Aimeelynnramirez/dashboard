@@ -7,6 +7,7 @@ import './Auth.css';
 // Configure Firebase.
 const config = {
   apiKey: 'AIzaSyDQxbmedDjHtBfjMaOiA2jF7XWGhZOm0QU',
+  
  // databaseURL:  'aimee-github.firebaseio.com',
   authDomain: 'https://aimee-github.firebaseio.com'
   // ...
@@ -54,7 +55,6 @@ class Auth extends React.Component {
   // Make sure we un-register Firebase observers when the component unmounts.
   componentWillUnmount() {
     console.clear();
-
     this.unregisterAuthObserver();
   }
 
@@ -62,15 +62,15 @@ class Auth extends React.Component {
     if (!this.state.isSignedIn) {
       return (
         <div>
-          <h1>My App</h1>
-          <p>Please sign-in:</p>
+          <h1>Dashboard</h1>
+          <p>sign-in:</p>
           <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
         </div>
       );
     }
     return (
       <div>
-        <h1>My App</h1>
+        <h1>Comment</h1>
         <NewPost/>
         <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p>
         <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
