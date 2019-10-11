@@ -1,18 +1,16 @@
-.Auth button {
+ .Auth button {
+  width:70%;
   margin: 5px 0;
   padding: 10px;
   font-family: 'Playfair Display', serif;
-
   letter-spacing: 2px;
   border: 1px solid #ac5391;
   border-radius: 55px;
-  background-color: transparent;
-  color:   #fd03b2;
+  background-color: #ac5391;
 }
-.Auth button:hover,
-.Auth button:active {
-    color: white;
-    background-color: #fd03b2;
+.Auth button:hover {
+    width:70%;
+    background-color:#ffae00;
 }
 .Auth p{
   font-family: 'Playfair Display', serif;
