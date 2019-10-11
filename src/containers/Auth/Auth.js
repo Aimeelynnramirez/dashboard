@@ -3,7 +3,7 @@ import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import NewPost from '../Blog/NewPost/NewPost.js';
-import './Auth.css';
+import classes from './Auth.css';
 import REACT_APP_API_KEY from '../../components/config_keys';
 // Configure Firebase.
 
@@ -72,10 +72,10 @@ class Auth extends React.Component {
       );
     }
     return (
-      <div>
+      <div className={classes.Auth}>
         <h1>Comment</h1>
         <NewPost/>
-        <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p>
+        <p>Welcome {firebase.auth().currentUser.displayName || firebase.auth().currentUser.email || firebase.auth().currentUser.phoneNumber }! <br/> You are now signed-in!</p>
         <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
       </div>
     );

@@ -1,22 +1,11 @@
- .Auth div button {
-  width:600px;
-  height:100%;
-  margin: 5px 0;
-  padding: 10px;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 2px;
-  border: 1px solid #ac5391;
-  border-radius: 55px;
-  background-color: #e284c6;
-  color:white;
 
-}
-.Auth button:hover {
-    width:50%;
-    color:white;
-    background-color:#ffae00;
-}
 .Auth p{
+  margin-left: 25%;
+  width:50%;
+  background-color: rgb(126, 192, 28);
+  color:white;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
   font-family: 'Playfair Display', serif;
   font-size:1rem;
 }
