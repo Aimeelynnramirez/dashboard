@@ -1,37 +1,24 @@
-// Import FirebaseAuth and firebase.
+
 import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import NewPost from '../Blog/NewPost/NewPost.js';
 import classes from './Auth.css';
 import REACT_APP_API_KEY from '../../components/config_keys';
-// Configure Firebase.
+
 
 const API_KEY = REACT_APP_API_KEY;
+
 const config = {
   apiKey: API_KEY,
-  
- // databaseURL:  'aimee-github.firebaseio.com',
   authDomain: 'aimee-github.firebaseio.com'
-  // ...
+
 };
 firebase.initializeApp(config);
 
-
-/* // Configure FirebaseUI.
-const uiConfig = {
-  signInFlow: 'popup',
-  signInSuccessUrl:'/sign-in',
-  signInOptions: [
-    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-    firebase.auth.PhoneAuthProvider.PROVIDER_ID,
-  ]
-}; */
-
 class Auth extends React.Component {
-     // The component's Local state.
-  state = {
-    isSignedIn: false // Local signed-in state.
+    state = {
+    isSignedIn: false 
   };
 
   uiConfig = {
@@ -49,13 +36,12 @@ class Auth extends React.Component {
     }
   };
 
-  // Listen to the Firebase Auth state and set the local state.
   componentDidMount() {
     this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
         (user) => this.setState({isSignedIn: !!user})
     );
   }
-  // Make sure we un-register Firebase observers when the component unmounts.
+
   componentWillUnmount() {
     console.clear();
     this.unregisterAuthObserver();
