@@ -64,7 +64,7 @@ class Blog extends Component {
                 
                 <br/>
                 <Switch>
-                    {this.state.importPosts ? <Route path="/new-post" component={AsyncNewPost} /> : null}
+                    {this.state.importPosts ? <Route path="/dashboard/new-post" component={AsyncNewPost} /> : null}
                    
                     <Route render={() => (
                 <div> 
@@ -79,10 +79,10 @@ class Blog extends Component {
                              <br/>
                              🕷🎃🦇
                              </p>
-{/*                              <Link to={'/new-post'
+ {/*                       <Link to={'/dashboard/new-post'
                                // hash: '#submit',
                                // search: '?quick-submit=true'
-                            }>Comment</Link>  */}
+                            }>Comment</Link>   */}
                             <br/>
                             <img src="https://i.imgur.com/CV4ujQq.jpg" alt="flowers and side by side artwork comparison"/>  
                             <Auth/> 

@@ -15,8 +15,9 @@ class NewPost extends Component {
     }
 
     componentDidMount () {
+        console.clear();
      // this makes sure that it goes to the right place.
-     this.props.history.push('/new-post');
+    /// this.props.history.push('/dashboard/new-post');
         // validated props.
        //console.log(this.props);  
     }

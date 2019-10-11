@@ -2,10 +2,11 @@
 import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
-import classes from './Auth.css';
+import NewPost from '../Blog/NewPost/NewPost.js';
+import './Auth.css';
 // Configure Firebase.
 const config = {
-  apiKey: 'AIzaSyD2iEr5cu3IwPQ3Q_pEmjmZchxvqS0MLPA',
+  apiKey: 'AIzaSyDQxbmedDjHtBfjMaOiA2jF7XWGhZOm0QU',
  // databaseURL:  'aimee-github.firebaseio.com',
   authDomain: 'https://aimee-github.firebaseio.com'
   // ...
@@ -13,25 +14,66 @@ const config = {
 firebase.initializeApp(config);
 
 
-// Configure FirebaseUI.
+/* // Configure FirebaseUI.
 const uiConfig = {
   signInFlow: 'popup',
-  signInSuccessUrl:'/dashboard/new-post',
+  signInSuccessUrl:'/sign-in',
   signInOptions: [
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
     firebase.auth.PhoneAuthProvider.PROVIDER_ID,
   ]
-};
+}; */
 
 class Auth extends React.Component {
+     // The component's Local state.
+  state = {
+    isSignedIn: false // Local signed-in state.
+  };
+
+  uiConfig = {
+    signInFlow: 'popup',
+    signInSuccessUrl:'/dashboard/new-post',
+    signInOptions: [
+      firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+    ],
+ 
+  
+    callbacks: {
+      // Avoid redirects after sign-in.
+      signInSuccessWithAuthResult: () => false
+    }
+  };
+
+  // Listen to the Firebase Auth state and set the local state.
+  componentDidMount() {
+    this.unregisterAuthObserver = firebase.auth().onAuthStateChanged(
+        (user) => this.setState({isSignedIn: !!user})
+    );
+  }
+  // Make sure we un-register Firebase observers when the component unmounts.
+  componentWillUnmount() {
+    console.clear();
+
+    this.unregisterAuthObserver();
+  }
+
   render() {
+    if (!this.state.isSignedIn) {
+      return (
+        <div>
+          <h1>My App</h1>
+          <p>Please sign-in:</p>
+          <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
+        </div>
+      );
+    }
     return (
-      <div className={classes.Auth}>
-         
-        <h1>welcome!</h1>
-        <p>sign-in:</p>
-        <StyledFirebaseAuth  uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
-        
+      <div>
+        <h1>My App</h1>
+        <NewPost/>
+        <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p>
+        <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
       </div>
     );
   }
