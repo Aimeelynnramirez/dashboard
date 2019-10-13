@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link} from 'react-router-dom';
-import asyncComponent from '../../hoc/asyncComponent';
+// import asyncComponent from '../../hoc/asyncComponent';
 // import NewPost from './NewPost/NewPost';
 import icon from '../../assets/goosepic.png';
 import classes from './Blog.css';
 import Auth from '../Auth/Auth';
 //import Footer from '../Footer/Footer';
 ///asyncNewPost here.
-const AsyncNewPost = asyncComponent(() => {
+/* const AsyncNewPost = asyncComponent(() => {
     return import('./NewPost/NewPost');
-});
+}); */
 
 class Blog extends Component {
     state = {
@@ -44,7 +44,8 @@ class Blog extends Component {
     render () {
         return (
             <div>
-                  <div className={classes.Nav}> 
+                 <Route exact path="/dashboard/home"  component={Blog}/>
+                  <div className={classes.Nav} > 
                   <br/>
                   <img alt="a pink logo" src= {icon}/> 
                   <br/>
@@ -64,13 +65,14 @@ class Blog extends Component {
                 
                 <br/>
                 <Switch>
-                    {this.state.importPosts ? <Route path="/dashboard/new-post" component={AsyncNewPost} /> : null}
-                   
+{/*                   {this.state.importPosts ? <Route path="/dashboard/new-post" component={AsyncNewPost} /> : null}
+ */}                   
                     <Route render={() => (
                 <div> 
             {/*    <div className={classes.Blog}>
             <Footer/>
                 </div> */}
+
                     <div className={classes.Blog}>
                            <span>faith, hope and love.</span>
                            <p>Hey, my name is Aimee.</p>

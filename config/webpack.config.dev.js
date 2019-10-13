@@ -144,7 +144,8 @@ module.exports = {
           {
             test: /\.(js|jsx)$/,
             include: paths.appSrc,
-            loader: require.resolve('babel-loader'),
+            loader: 'babel-loader', exclude: /node_modules/ ,
+           // loader: require.resolve('babel-loader'),
             options: {
               
               // This is a feature of `babel-loader` for webpack (not Babel itself).

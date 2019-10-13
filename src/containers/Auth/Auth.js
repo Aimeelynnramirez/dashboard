@@ -60,9 +60,10 @@ class Auth extends React.Component {
     return (
       <div className={classes.Auth}>
         <h1>Comment</h1>
-        <NewPost/>
         <p>Welcome {firebase.auth().currentUser.displayName || firebase.auth().currentUser.email || firebase.auth().currentUser.phoneNumber }! <br/> You are now signed-in!</p>
         <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+        <NewPost/>
+       
       </div>
     );
   }

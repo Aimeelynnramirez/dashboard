@@ -1,3 +1,13 @@
 .Info a {
    float: left;
 }
+.Info button{
+   font-size:1rem;
+   color:#ffae00;
+   background-color: transparent;
+   border:none;
+}
+.Info button:hover{
+   color: #fd03b2;
+   background-color: transparent;
+}

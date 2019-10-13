@@ -23,11 +23,9 @@ class Info extends Component {
         if (this.state.submitted) {
         return(
         <div>
-
-
- <NavLink  to={{pathname: '/dashboard'}}>X</NavLink>
- <br/>
- <div className={classes.Info}>
+        <NavLink  to={{pathname: '/dashboard'}}>hide</NavLink>
+        <br/>
+        <div className={classes.Info}>
             <br/>
             <p>I'm a basic bee. Enough about me.</p> 
             <p>Leave me a comment or an email. I'll try to get back to you! 
@@ -40,7 +38,7 @@ class Info extends Component {
              }
         return (
             <div>
-        <NavLink  to={{pathname: '/dashboard'}}>X</NavLink>
+        <NavLink  to={{pathname: '/dashboard'}}>hide</NavLink>
         <br/>
             <div className={classes.Info}>
                  <p>My name  is Aimee. <br/>I run on coffee. I like to meditate. I enjoy the walks on the beach and my pumpkin spiced lattes. </p> 

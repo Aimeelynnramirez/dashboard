@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 import * as actionTypes from './actionTypes';
-//import firebase from 'firebase';
+import firebase from 'firebase';
 
-const firebase = require('firebase/app');
 
 export const authStart = () => {
     return {
@@ -33,34 +32,38 @@ export const auth = (email, password, isSignup, token, userId) => {
         const authData = {
             email: email,
             password: password,
-            returnSecureToken: true
+            auth: true
         };
-        let url = 'https://aimee-github.firebaseio.com/sign-up.json';
+        let url = 'https://aimee-github.firebaseio.com/users.json';
         if (!isSignup) {
-            url = 'https://aimee-github.firebaseio.com/sign-up.json';
+            url = 'https://aimee-github.firebaseio.com/users.json';
         }
-      
-    const getAuth = authData;
-       axios.post(url, authData)
-            .then(response => {
-                  if( getAuth === authData){  
-                    dispatch(authSuccess(response.data));
-                    axios.get(url)
+    axios.post(url, authData)
+     .then(response => {
+      // dispatch(authSuccess(response.data));
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+            let errorMessage = error.message;
+            alert(errorMessage)
+            });
+             firebase.auth().onAuthStateChanged(function (auth) {
+                  if (auth) {    
+                    axios.get('https://aimee-github.firebaseio.com/users.json')
                     .then(response => {
-
                     const formElementsArray = [];
                     for ( let key in response.data ) {
                         formElementsArray.push( {
                             id: key,
-                            config: response.data[key]
+                            config: response.data[key],
+                            uid:auth.uid
                         } );
                     }
-              
+   
                    const formMatch = formElementsArray.map(selectedEmail=> {
                     let storage = selectedEmail.config.email;
                     return storage;
 
                  })
+              
 
                  const formMatchId = formElementsArray.map(selectedId=> {
                     let storage = selectedId.id;
@@ -79,64 +82,55 @@ export const auth = (email, password, isSignup, token, userId) => {
                         const copyDelete = [];
 
                         for(let a = 0;  a < formMatch.length; a++){
-
                           copyDelete.push(formMatch[a]);
+
+
                           } 
-     
                           const copyDeletePass = [];
 
                           for(let j = 0;  j < formMatch.length; j++){
-  
                             copyDeletePass.push(formMatchPass[j]);
+
                             } 
-       
-                            /* formMatch.forEach((item, i) => { */
+ 
                                 for(let i = 0;  i < formMatch.length; i++){
-                                //counterIndex += 1;
-                                //let maxLength = Number(counterIndex);
-                               // console.log("This is number of indexes signed:", maxLength);
-                                const state = [];
-                               //console.log("# data:")
-                                for (let obj in copyDelete) {
-                                   //console.log(obj)
-                                    state.push(obj)
-                                }
+
                                     let formBool =  formMatch[formMatch.length-1] !== copyDelete[i-1];
                                     let formBoolPass =  formMatchPass[formMatchPass.length-1] !== copyDeletePass[i-1];
 
                                    const getOnce = () => {
-                        
+
                                     if(!formBool && !formBoolPass && i > 0){
-                                        alert("looks like you already send this email.")
-                                        let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[formMatch.length-1]}.json`;
+                                        alert("Welcome Back!");
+                                        let userArray = `https://aimee-github.firebaseio.com/users/${formMatchId[formMatch.length-1]}.json`;
                                         axios.delete(userArray); 
+                                        dispatch(authSuccess(response.data));
                                     }
-                                    if(!formBool && formBoolPass && i > 0){
-                                        alert("did you forget your password? try again.")
-                                        let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[formMatch.length-1]}.json`;
+                                    if(formBool | formBoolPass && i > 0){
+                                        let userArray = `https://aimee-github.firebaseio.com/users/${formMatchId[formMatch.length-1]}.json`;
                                         axios.delete(userArray); 
                                         return null;
-                                        
                                     }
                                    }
-                                   getOnce()
-
                                 if( formMatch[i] === "" || formMatchPass[i] === "") {
-                                    alert("this is empty!")
+                                    alert("this is empty!");
                                     let userArray = `https://aimee-github.firebaseio.com/sign-up/${formMatchId[i]}.json`;
                                     axios.delete(userArray); 
                                     console.log(userArray);
                                     return null;
                                 }
+                               
+                                getOnce()
                             }
                        }
                         wrapper()
                     })
-                }    
+                }})
             })
             .catch(err => {
                 console.log(err);
                 dispatch(authFail(err));
+                return null;
             });
             
         

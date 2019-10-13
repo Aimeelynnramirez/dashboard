@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import classes from './NewPost.css';
 import axios from 'axios';
-import Info from '../../Auth/Info.js';
-import { NavLink, Link, Route } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
+import Admin from '../../Auth/Admin';
 
 class NewPost extends Component {
     state = {
@@ -22,6 +21,7 @@ class NewPost extends Component {
         // validated props.
        //console.log(this.props);  
     }
+ 
     postDataHandler = (data) => {
     //just for scope.
    // let counter = 0;
@@ -51,16 +51,16 @@ class NewPost extends Component {
                 })        
     }   
     render () {
-        const author = this.state.author;
-        
         const submittedArray = [];
         for ( let key in this.state.data) {
             submittedArray.push( {
                 id: key,
+                //author: this.state.author,
                 config: this.state.data[key]
             } );
-            console.log("this is submitted: ", submittedArray);
+      //console.log("this is submitted: ", submittedArray);
         }
+      const author = this.state.data.Author;
         const showSubmitted = submittedArray.map(submittedElement => (
             <div key={submittedElement.id}
                value={submittedElement.config.value}>
@@ -70,8 +70,9 @@ class NewPost extends Component {
                 )
         if (this.state.submitted) {
         return(<div>
-            <NavLink to={{pathname: '/dashboard'}}>Dashboard</NavLink> 
-            <div className={classes.NewPost}>
+        <br/>
+        <NavLink to={{pathname: '/dashboard'}}  onClick={()=> {window.location.reload()} }>Back</NavLink> 
+        <div className={classes.NewPost}>
             <span>Confirmed!</span>
             <p>Thanks {author}! </p>
             <p> You sent :</p>
@@ -83,18 +84,10 @@ class NewPost extends Component {
                 )
              }
         return (
-            <div >
-                <div className={classes.NewPost}>
-         <Route path="/dashboard/Info" component={Info} />
-           <Link to={'/dashboard/Info'
-                               // hash: '#submit',
-                               // search: '?quick-submit=true'
-                            }>Info</Link> 
-                            <br/>
-                            👻
-                            </div>
+         <div>
             <div className={classes.NewPost}>
-                <br/>
+                <Admin/>
+                <hr/>
                 <h3>Add a Post</h3>
                 <hr/>
                 <label>Title</label>
@@ -104,9 +97,7 @@ class NewPost extends Component {
                 <label>Author</label>
                 <input placeholder="Aimee" value={this.state.author} onChange={(event) => this.setState({author: event.target.value})}/>
                 <button onClick={()=> {if(window.confirm('Are you sure you want to send this comment?')) this.postDataHandler()}}>Add Post</button>
-   
-                </div>
-                
+                </div> 
             </div>
         );
     }
