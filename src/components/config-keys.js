@@ -1,4 +1,4 @@
-const REACT_APP_API_KEY ="AIzaSyDQxbmedDjHtBfjMaOiA2jF7XWGhZOm0QU";
+const REACT_APP_API_KEY ="AIzaSyCs6Mc6RAaILb6uw_RgnvWIED137gzWjIU";
 export default REACT_APP_API_KEY;
 /* 
 For the Google Javascript API v3 the keys must be public on you page. The applicable text is:
