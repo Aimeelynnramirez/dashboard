@@ -57,12 +57,14 @@ export const auth = (email, password, isSignup, token, userId) => {
                         formElementsArray.push( {
                             id: key,
                             config: response.data[key],
-                            uid:auth.uid
+                            uid:auth.uid,
+                          
+                    
                         } );
                     }
-   
+                       
                    const formMatch = formElementsArray.map(selectedEmail=> {
-                    let storage = selectedEmail.config.email;
+                    let storage = selectedEmail.config.email;  
                     return storage;
 
                  })
@@ -79,7 +81,7 @@ export const auth = (email, password, isSignup, token, userId) => {
                     return storage2;
 
                  })
-
+             
                 const wrapper = () => {
                   
                         const copyDelete = [];
@@ -103,7 +105,6 @@ export const auth = (email, password, isSignup, token, userId) => {
                                     let getDelete = `/${formMatchId[formMatch.length-1]}`;
                                     let getUrl = 'https://aimee-github.firebaseio.com/users/'+ auth.uid + getDelete + '.json';
                                     let userArray = getUrl;
-
                                    const getOnce = () => {
 
                                     if(!formBool && !formBoolPass && i > 0){

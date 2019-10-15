@@ -1,6 +1,7 @@
 .Admin {
     padding-left:25%;
     width:50%;
+    
 }
 .Admin button{
     font-size:1rem;
@@ -16,4 +17,7 @@
     font-family: 'Playfair Display', serif;
     font-size:1.2rem;
     background-color: rgb(72, 145, 0);
+}
+.Admin input {
+    -webkit-text-security: disc;
 }
