@@ -56,8 +56,8 @@ class Blog extends Component {
                   <p>Turn to
                    <br/>
                   <button
-                  onClick ={this.switchBgModeHandler}>
-                  {this.state.changeColorBg ? '☾' : '☼'}
+                  onClick ={this.switchBgModeHandler} aria-label="half-moon switch mode to sun in uncode">
+                  {this.state.changeColorBg ? '\u263E' : '\u263C'}
                   </button>
                   <br/>
                   Mode.</p>
@@ -75,18 +75,19 @@ class Blog extends Component {
 
                     <div className={classes.Blog}>
                            <span>faith, hope and love.</span>
+                           <h5>Who am I anyways?</h5>
                            <p>Hey, my name is Aimee.</p>
                             <p>
-                             Kindly leave a comment here!
-                             <br/>
-                             🕷🎃🦇
+                            Well, To start I'm passionate about the things I do here.   
+
+                            <br/>
                              </p>
  {/*                       <Link to={'/dashboard/new-post'
                                // hash: '#submit',
                                // search: '?quick-submit=true'
                             }>Comment</Link>   */}
                             <br/>
-                            <img src="https://i.imgur.com/CV4ujQq.jpg" alt="flowers and side by side artwork comparison"/>  
+                            <img src="https://i.imgur.com/CV4ujQq.jpg" alt="a flower collage with a painted oil canvas interperation of flowers to the right."/>  
                             <Auth/> 
                             </div> 
                     </div>)}/>
