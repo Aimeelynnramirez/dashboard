@@ -73,16 +73,16 @@ Professional developers use Terminal daily. It's essential to understand some fu
 Version control, also known as revision control, records changes to a file or set of files over time so that you can recall specific versions later. In this class, we are learning Git. Here's what I have learned. 
 
 **1. There are three types of version control.**
-> 1. Local version control system.
+**a. Local version control system.**
 
->  Local
+####  Local
 > This is the method that most people implement. It involves copying files from one  
 > directory into another or simply saving a file with a new version number. 
 > This would be similar to the Real World Example described above. While this approach  
 > is simple, it leaves the door open for errors.
 
    
-**2. Centralized version control system.**
+**b. Centralized version control system.**
    ![alt text](https://i.imgur.com/Pd0zzKL.jpg "CVCS example")
 #### Centralized (CVCS)
 
@@ -97,7 +97,7 @@ Version control, also known as revision control, records changes to a file or se
 > can work on the project nor can anything be saved. If that server crashes and proper backups do not exist, everything is lost, the  
 > entire history, except the snippets that people may happen to have on their local machine.
    
-**3. Distributed version control system.**
+**c. Distributed version control system.**
    ![alt text](https://i.imgur.com/Z8qcwXh.jpg "DVCS example")
  
 ####  Distributed (DVCS)
