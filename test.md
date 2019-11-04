@@ -82,9 +82,9 @@ Version control, also known as revision control, records changes to a file or se
 > is simple, it leaves the door open for errors.
 
    
-> 2. Centralized version control system.
-   ![alt text](https://i.imgur.com/Pd0zzKL.jpg "CVCS example"
->   Centralized (CVCS)
+**2. Centralized version control system.**
+   ![alt text](https://i.imgur.com/Pd0zzKL.jpg "CVCS example")
+#### Centralized (CVCS)
 
 > This method is utilized when developers need to collaborate on a single server. A  
 > developer simply checks out the latest piece of code on which work is to be  
@@ -97,11 +97,10 @@ Version control, also known as revision control, records changes to a file or se
 > can work on the project nor can anything be saved. If that server crashes and proper backups do not exist, everything is lost, the  
 > entire history, except the snippets that people may happen to have on their local machine.
    
-
-> 3. Distributed version control system.
+**3. Distributed version control system.**
    ![alt text](https://i.imgur.com/Z8qcwXh.jpg "DVCS example")
  
->  Distributed (DVCS)
+####  Distributed (DVCS)
 
 > This method allows the developer to make an exact copy of the repository and store it on the local drive.
 
