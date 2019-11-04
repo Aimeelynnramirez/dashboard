@@ -1,0 +1,121 @@
+# DVP1 / Project & Portfolio 1
+### Name / Maintainer : Aimee Ramirez
+### 11/4/19
+
+
+
+## [ DEV119-O 01 | Project and Portfolio I: Development ] 
+
+* **[ dvp1-1911-alramirez1 ]**
+* **[ Aimee Ramirez ]**
+* **[ 11/10/19 ]**
+
+**[ dvp1-1911-alramirez1/activities/research/Ramirez_Aimee_VersionControl.md ]**
+
+This research paper summarizes the time and effort looking into these topics about these matters outlined in this markdown. 
+
+Repository Link is here: [dvp1-1911-alramirez1](https://github.com/ePortfolios/dvp1-1911-alramirez1)
+
+
+## Topic: Terminal
+Professional developers use Terminal daily. It's essential to understand some fundamental commands to use the application. Here's what I have learned...  
+
+**1. Using Terminal, there are essential Linux commands I must know.**
+ 
+
+**The last bullet provides an example**.
+
+* [ clear ]: Clear the Screen 
+* [ pwd ]: Print the "Working Directory"
+* [ ls ]: List files and folders
+* [ ls -a ]: List files and folders, including invisible files
+* [ ls -la ]: List all files and folders, in human readable form
+* [ cd ]: Change directory
+* [ cd .. | cd / ]: Change directory, go to root
+* [ cd <name_of_dir> | cd ~ (this doesn't work for me.) ]: Change directory, go up one folder level
+* [ cd <first_name_of_dir>/<second_name_of_dir> ]: Change directory, go up two folder levels
+* **cd ~/Desktop/**: Change directory to my desktop! 
+
+
+**2. After Trying Linux Commands in Terminal, I learned...**
+
+**Folder Drop:** [ Student Response: Describe what happens when you drag a folder into terminal. If you typed "cd " before dragging the folder into Terminal, could that help you quickly navigate to the folder location? Test this out and describe your results. ]
+ 
+
+**1.2 Using Terminal, there are essential Powershell commands I know.**
+
+*PowerShell is a task-based command-line tool and a scripting language. It is available for most major operating systems such as macOS, Linux and Windows. PowerShell has specific commands for tasks on the system which are known as cmdlets. PowerShell also provides aliases for common Unix commands.*
+
+
+* **[ Clear-Host ]**: Clear the Screen 
+* **[ Get-Location ]**: Print the "Working Directory"
+* **[ Get-ChildItem ]**: List files and folders
+* **[ Get-ChildItem . -Force ]**: List files and folders, including invisible files
+* **[ Get-ChildItem  ]**: List all files and folders, in human readable form
+* **[ Set-Location ]**: Change directory
+* **[ Set-Location C:\ ]**: Change directory, go to root
+* **[ Set-Location -Path C:\<path>\<to>\<first_name_of_directory> ]**: Change directory, go up one folder level
+* **[  Set-Location -Path C:\<path>\<to>\<first_name_of_directory>\<second_name_of_directory> ]**: Change directory, go up two folder levels
+ 
+
+
+**2. After Trying Powershell Commands in Terminal, I learned...**
+
+**Folder Drop:** [ Student Response: Describe what happens when you drag a folder into terminal. If you typed "cd " before dragging the folder into Terminal, could that help you quickly navigate to the folder location? Test this out and describe your results. ]
+ 
+
+
+
+## Topic: Version Control & Git
+Version control, also known as revision control, records changes to a file or set of files over time so that you can recall specific versions later. In this class, we are learning Git. Here's what I have learned. 
+
+**1. There are three types of version control.**
+
+[ Student Response: Describe three types of version control. Include at least (1) in-text citation and reference used to complete this research item. ] 
+
+
+
+**2. Using Terminal, there are essential Git commands I must know.**
+
+[ Student Response: List the correct Git commands to do the actions listed below in Terminal. Replace CMD with the correct command and keep or enhance the brief description. **The last bullet provides an example**. 
+
+* **[ git clone ]**: Clone a repository
+* **[ git config --global user.name “[firstname lastname]” ]**: Set-up a global user name
+* **[ git config --global user.email “[valid-email]” ]**: Set-up a global email address (to match my GitHub account eMail)
+* **[ git status ]**: Show modified files
+* **[ git status ]**: Add modified files to the next commit
+* **[ git commit -m “[descriptive message]” ]**: Make a commit with a new message
+* **[ git log ]**: Show my commit history
+* **[ git help ]**: This command will bring up Git's help screen in Terminal!
+    
+
+Include at least (1) in-text citation and reference used to complete this research item. ] 
+
+
+
+**3. Authenticating with GitHub from Git.**
+
+[ Student Response: HTTPS is the the correct way to connect to GitHub in Project & Portfolio. Describe how you connect using this protocol. Include at least (1) in-text citation and reference used to complete this research item. ] 
+
+
+
+
+
+
+# References
+
+Replace the example reference below with your own references in APA format.
+
+
+Author, A. A., & Author, B. B. (Date of publication). Title of article. Title of Online Periodical, volume number(issue number if available). Retrieved from
+[http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html](http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html)
+
+Author, A. A., & Author, B. B. (Date of publication). Title of article. Title of Online Periodical, volume number(issue number if available). Retrieved from
+[https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6)
+https://github.com/PowerShell/PowerShell
+https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6
+
+Author, A. A., & Author, B. B. (Date of publication). Title of article. Title of Online Periodical, volume number(issue number if available). Retrieved from
+[http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html](http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html)
+
+
