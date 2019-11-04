@@ -25,19 +25,20 @@ Professional developers use Terminal daily. It's essential to understand some fu
 
 **The last bullet provides an example**.
 
-* [ clear ]: Clear the Screen 
-* [ pwd ]: Print the "Working Directory"
-* [ ls ]: List files and folders
-* [ ls -a ]: List files and folders, including invisible files
-* [ ls -la ]: List all files and folders, in human readable form
-* [ cd ]: Change directory
-* [ cd .. | cd / ]: Change directory, go to root
-* [ cd <name_of_dir> | cd ~ (this doesn't work for me.) ]: Change directory, go up one folder level
-* [ cd <first_name_of_dir>/<second_name_of_dir> ]: Change directory, go up two folder levels
+* **[ clear ]**: Clear the Screen 
+* **[ pwd ]**: Print the "Working Directory"
+* **[ ls ]**: List files and folders
+* **[ ls -a ]**: List files and folders, including invisible files
+* **[ ls -la ]**: List all files and folders, in human readable form
+* **[ cd ]**: Change directory
+* **[ cd .. | cd / ]**: Change directory, go to root
+* **[ cd <name_of_dir> | cd ~ ]**: Change directory, go up one folder level
+* **[ cd <first_name_of_dir>/<second_name_of_dir> ]**: Change directory, go up two folder levels
 * **cd ~/Desktop/**: Change directory to my desktop! 
 
 
 **2. After Trying Linux Commands in Terminal, I learned...**
+* cd ~ (this doesn't work for me.) but I know it works for MacBooks as a Windows User.
 
 **Folder Drop:** [ Student Response: Describe what happens when you drag a folder into terminal. If you typed "cd " before dragging the folder into Terminal, could that help you quickly navigate to the folder location? Test this out and describe your results. ]
  
