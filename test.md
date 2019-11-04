@@ -33,7 +33,7 @@ Professional developers use Terminal daily. It's essential to understand some fu
 * **[ cd ]**: Change directory
 * **[ cd .. | cd / ]**: Change directory, go to root
 * **[ cd <name_of_dir> | cd ~ ]**: Change directory, go up one folder level
-* **[ cd <first_name_of_dir>/<second_name_of_dir> ]**: Change directory, go up two folder levels
+* **[ cd ./<first_name_of_dir>/<second_name_of_dir> ]**: Change directory, go up two folder levels
 * **cd ~/Desktop/**: Change directory to my desktop! 
 
 
@@ -55,8 +55,8 @@ Professional developers use Terminal daily. It's essential to understand some fu
 * **[ Get-ChildItem  ]**: List all files and folders, in human readable form
 * **[ Set-Location ]**: Change directory
 * **[ Set-Location C:\ ]**: Change directory, go to root
-* **[ Set-Location -Path C:/<path>/<to>/<first_name_of_directory> ]**: Change directory, go up one folder level
-* **[ Set-Location -Path C:/<path>/<to>/<first_name_of_directory>/<second_name_of_directory> ]**: Change directory, go up two folder levels
+* **[ Set-Location -Path C:\\<path>\<to>\<first_name_of_directory> ]**: Change directory, go up one folder level
+* **[  Set-Location -Path C:/\<path>\<to>\<first_name_of_directory>\<second_name_of_directory> ]**: Change directory, go up two folder levels
  
 
 
