@@ -40,7 +40,8 @@ Professional developers use Terminal daily. It's essential to understand some fu
 **2. After Trying Linux Commands in Terminal, I learned...**
 * cd ~ (this doesn't work for me.) but I know it works for MacBooks as a Windows User.
 
-**Folder Drop:** [ Student Response: Describe what happens when you drag a folder into terminal. If you typed "cd " before dragging the folder into Terminal, could that help you quickly navigate to the folder location? Test this out and describe your results. ]
+**Folder Drop:** 
+* Dragging and dropping the folder to the Linux terminal shows the path of the folder structure. That if to "cd" then drag and drop the folder it is to go to the direct path of where the folder structure. 
  
 
 **1.2 Using Terminal, there are essential Powershell commands I know.**
@@ -62,7 +63,8 @@ Professional developers use Terminal daily. It's essential to understand some fu
 
 **2. After Trying Powershell Commands in Terminal, I learned...**
 
-**Folder Drop:** [ Student Response: Describe what happens when you drag a folder into terminal. If you typed "cd " before dragging the folder into Terminal, could that help you quickly navigate to the folder location? Test this out and describe your results. ]
+**Folder Drop:** 
+* When dragging and dropping a folder in the Powershell terminal, it does not show the file path to the directory of the repository that was pulled into the terminal. 
  
 
 
@@ -71,8 +73,37 @@ Professional developers use Terminal daily. It's essential to understand some fu
 Version control, also known as revision control, records changes to a file or set of files over time so that you can recall specific versions later. In this class, we are learning Git. Here's what I have learned. 
 
 **1. There are three types of version control.**
+   1. Local version control system.
+   ```
+   Local
 
-[ Student Response: Describe three types of version control. Include at least (1) in-text citation and reference used to complete this research item. ] 
+This is the method that most people implement. It involves copying files from one directory into another or simply saving a file with a new version number. This would be similar to the Real World Example described above. While this approach is simple, it leaves the door open for errors.
+```
+   
+   2. Centralized version control system.
+   ![alt text](https://i.imgur.com/Pd0zzKL.jpg "CVCS example"
+   ```
+   Centralized (CVCS)
+
+This method is utilized when developers need to collaborate on a single server. A developer simply checks out the latest piece of code on which work is to be completed.
+
+The advantage to this is that everyone knows what everyone else is doing based on the code that has been checked out and by whom. Administrators control who can do what on a project and it’s easier to administer a single server than multiple local drives.
+
+There are disadvantages to this approach as well. The first was alluded to above, a single server. If that server goes down, no one can work on the project nor can anything be saved. If that server crashes and proper backups do not exist, everything is lost, the entire history, except the snippets that people may happen to have on their local machine.
+   
+   ```
+   3. Distributed version control system.
+   ![alt text](https://i.imgur.com/Z8qcwXh.jpg "DVCS example"
+   ```
+   Distributed (DVCS)
+
+This method allows the developer to make an exact copy of the repository and store it on the local drive.
+
+The main advantage to this is that if the server dies, each collaborator has an exact copy of the project, which can be utilized as a backup to restore the server.
+
+Another advantage is that most DVCSs can handle several remote repositories simultaneously; this allows developers to collaborate with multiple groups in different manners. Thus, hierarchical workflows are possible.
+   ```
+
 
 
 
