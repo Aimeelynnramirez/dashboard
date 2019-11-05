@@ -3,9 +3,9 @@
 ## DEV119-O 01 
 ## Project and Portfolio I: Development 
 
- **dvp1-1911-alramirez1**
- **Aimee Ramirez**
- **11/10/19**
+* **dvp1-1911-alramirez1**
+* **Aimee Ramirez**
+* **11/10/19**
 
 **dvp1-1911-alramirez1/activities/research/Ramirez_Aimee_VersionControl.md**
 
@@ -19,19 +19,22 @@ Professional developers use Terminal daily. It's essential to understand some fu
 
 *I've learned that all different terminals windows that could run commands.*
 
+
 **1. Using Terminal, there are essential Linux commands I must know.**
  
-* **clear**: Clear the Screen 
-* **pwd**: Print the "Working Directory"
-* **ls**: List files and folders
-* **ls -a**: List files and folders, including invisible files
-* **ls -la**: List all files and folders, in human readable form
-* **cd**: Change directory
-* **cd ..** or
-* **cd /**: Change directory, go to root
-* **cd <name_of_dir>** or 
-* **cd ~**: Change directory, go up one folder level
-* **cd ./<first_name_of_dir>/<second_name_of_dir>**: Change directory, go up two folder levels
+
+**The last bullet provides an example**.
+# TODO
+
+* **[ clear ]**: Clear the Screen 
+* **[ pwd ]**: Print the "Working Directory"
+* **[ ls ]**: List files and folders
+* **[ ls -a ]**: List files and folders, including invisible files
+* **[ ls -la ]**: List all files and folders, in human readable form
+* **[ cd ]**: Change directory
+* **[ cd .. | cd / ]**: Change directory, go to root
+* **[ cd <name_of_dir> | cd ~ ]**: Change directory, go up one folder level
+* **[ cd ./<first_name_of_dir>/<second_name_of_dir> ]**: Change directory, go up two folder levels
 * **cd ~/Desktop/**: Change directory to my desktop! 
 
 
@@ -74,8 +77,7 @@ Professional developers use Terminal daily. It's essential to understand some fu
 ## Topic: Version Control & Git
 Version control, also known as revision control, records changes to a file or set of files over time so that you can recall specific versions later. In this class, we are learning Git. Here's what I have learned. 
 
-### 1. There are three types of version control.
-
+**1. There are three types of version control.**
 **a. Local version control system.**
 
 ####  Local
