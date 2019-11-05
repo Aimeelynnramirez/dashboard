@@ -76,10 +76,9 @@ Professional developers use Terminal daily. It's essential to understand some fu
 
 ## Topic: Version Control & Git
 Version control, also known as revision control, records changes to a file or set of files over time so that you can recall specific versions later. In this class, we are learning Git. Here's what I have learned. 
-----------------------------------------------------------------------------------
 
-**1. There are three types of version control.**
-----------------------------------------------------------------------------------
+### 1. There are 3 types of version control.
+
 
 ### a. Local version control system.
 
