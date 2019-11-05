@@ -27,7 +27,8 @@ Professional developers use Terminal daily. It's essential to understand some fu
 * **ls -a**: List files and folders, including invisible files
 * **ls -la**: List all files and folders, in human readable form
 * **cd**: Change directory
-* **cd .. or cd / **: Change directory, go to root
+* **cd ..** or
+**cd /**: Change directory, go to root
 * **cd <name_of_dir> or cd ~**: Change directory, go up one folder level
 * **cd ./<first_name_of_dir>/<second_name_of_dir>**: Change directory, go up two folder levels
 * **cd ~/Desktop/**: Change directory to my desktop! 
