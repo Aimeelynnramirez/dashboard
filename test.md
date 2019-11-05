@@ -76,8 +76,11 @@ Professional developers use Terminal daily. It's essential to understand some fu
 
 ## Topic: Version Control & Git
 Version control, also known as revision control, records changes to a file or set of files over time so that you can recall specific versions later. In this class, we are learning Git. Here's what I have learned. 
+----------------------------------------------------------------------------------
 
 **1. There are three types of version control.**
+----------------------------------------------------------------------------------
+
 ### a. Local version control system.
 
 ####  Local
@@ -114,13 +117,9 @@ Version control, also known as revision control, records changes to a file or se
 > Another advantage is that most DVCSs can handle several remote repositories simultaneously; 
 > this allows developers to collaborate with multiple groups in different manners.
 > Thus, hierarchical workflows are possible.
-
-
-
-
-
+----------------------------------------------------------------------------------
 **2. Using Terminal, there are essential Git commands I must know.**
- 
+
 
 * **[ git clone ]**: Clone a repository
 * **[ git config --global user.name “[firstname lastname]” ]**: Set-up a global user name
@@ -135,16 +134,15 @@ Version control, also known as revision control, records changes to a file or se
 
 [Github Command Reference](https://education.github.com/git-cheat-sheet-education.pdf) 
 
+**3. Authenticating with GitHub from Git.** 
 
+*Authenticating on the command line using HTTPS
+When prompted for a username and password on the command line, use your GitHub username and personal access token. The command line prompt won't specify that you should enter your personal access token when it asks for your password.* 
 
-**3. Authenticating with GitHub from Git.**
 
 - [authenticating-to-github-git](https://help.github.com/en/github/authenticating-to-github) 
 
-- [authenticating-to-github-commandline](https://help.github.com/en/github/authenticating-to-github/accessing-github-using-two-factor-authentication##targetText=Authenticating%20on%20the%20command%20line%20using%20HTTPS,-After%20you've&targetText=When%20prompted%20for%20a%20username,it%20asks%20for%20your%20password.b) 
------------------------------------------------------------------------------------
-*HTTPS is the the correct way to connect to GitHub in Project & Portfolio. I would "git init" the directory then I would "git status" to see the updated files. I would check each file to be committed. Example: "git add <files_to_be_committed>". I would then "git checkout" the branch to make sure it's in the right branch. I would "git remote -v" then check the remote origin. Then I would "git commit -m "a meaningful message", then "git push origin <branch_name>".* 
-
+- [authenticating-to-github-commandline](https://help.github.com/en/github/authenticating-to-github/accessing-github-using-two-factor-authentication##targetText=Authenticating%20on%20the%20command%20line%20using%20HTTPS,-After%20you've&targetText=When%20prompted%20for%20a%20username,it%20asks%20for%20your%20password.b)
 
 # References
 
