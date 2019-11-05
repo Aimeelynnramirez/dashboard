@@ -139,8 +139,9 @@ Version control, also known as revision control, records changes to a file or se
 
 **3. Authenticating with GitHub from Git.**
 
-[authenticating-to-github-git](https://help.github.com/en/github/authenticating-to-github) 
-[authenticating-to-github-commandline](https://help.github.com/en/github/authenticating-to-github/accessing-github-using-two-factor-authentication##targetText=Authenticating%20on%20the%20command%20line%20using%20HTTPS,-After%20you've&targetText=When%20prompted%20for%20a%20username,it%20asks%20for%20your%20password.b) 
+- [authenticating-to-github-git](https://help.github.com/en/github/authenticating-to-github) 
+
+- [authenticating-to-github-commandline](https://help.github.com/en/github/authenticating-to-github/accessing-github-using-two-factor-authentication##targetText=Authenticating%20on%20the%20command%20line%20using%20HTTPS,-After%20you've&targetText=When%20prompted%20for%20a%20username,it%20asks%20for%20your%20password.b) 
 *HTTPS is the the correct way to connect to GitHub in Project & Portfolio. I would "git init" the directory then I would "git status" to see the updated files. I would check each file to be committed. Example: "git add <files_to_be_committed>". I would then "git checkout" the branch to make sure it's in the right branch. I would "git remote -v" then check the remote origin. Then I would "git commit -m "a meaningful message", then "git push origin <branch_name>".* 
 
 
