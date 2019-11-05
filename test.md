@@ -1,29 +1,33 @@
 # DVP1 / Project & Portfolio 1
-### Name / Maintainer : Aimee Ramirez
-### 11/4/19
 
+## DEV119-O 01 
+## Project and Portfolio I: Development 
 
+* **dvp1-1911-alramirez1**
+* **Aimee Ramirez**
+* **11/10/19**
 
-## [ DEV119-O 01 | Project and Portfolio I: Development ] 
-
-* **[ dvp1-1911-alramirez1 ]**
-* **[ Aimee Ramirez ]**
-* **[ 11/10/19 ]**
-
-**[ dvp1-1911-alramirez1/activities/research/Ramirez_Aimee_VersionControl.md ]**
+**dvp1-1911-alramirez1/activities/research/Ramirez_Aimee_VersionControl.md**
 
 This research paper summarizes the time and effort looking into these topics about these matters outlined in this markdown. 
 
-Repository Link is here: [dvp1-1911-alramirez1](https://github.com/ePortfolios/dvp1-1911-alramirez1)
+Repository Link: [dvp1-1911-alramirez1](https://github.com/ePortfolios/dvp1-1911-alramirez1)
 
 
 ## Topic: Terminal
 Professional developers use Terminal daily. It's essential to understand some fundamental commands to use the application. Here's what I have learned...  
 
+*I've learned that all different areas/terminals that I run commands can differentiate by environments to what type of window is being utilized.*
+For example:
+- terminal = text input/output environment.
+- console = physical terminal.
+- shell - command line interpreter.
+
 **1. Using Terminal, there are essential Linux commands I must know.**
  
 
 **The last bullet provides an example**.
+# TODO
 
 * **[ clear ]**: Clear the Screen 
 * **[ pwd ]**: Print the "Working Directory"
@@ -43,6 +47,8 @@ Professional developers use Terminal daily. It's essential to understand some fu
 **Folder Drop:** 
 * Dragging and dropping the folder to the Linux terminal shows the path of the folder structure. That if to "cd" then drag and drop the folder it is to go to the direct path of where the folder structure. 
  
+# TODO
+Repository Link is here: [dvp1-1911-alramirez1](https://github.com/ePortfolios/dvp1-1911-alramirez1)
 
 **1.2 Using Terminal, there are essential Powershell commands I know.**
 
@@ -62,10 +68,13 @@ Professional developers use Terminal daily. It's essential to understand some fu
 
 
 **2. After Trying Powershell Commands in Terminal, I learned...**
+# TODO
 
 **Folder Drop:** 
 * When dragging and dropping a folder in the Powershell terminal, it does not show the file path to the directory of the repository that was pulled into the terminal. 
  
+
+[PowerShell Command Reference](https://docs.microsoft.com/en-us/powershell/?view=powershell-6)
 
 
 
@@ -115,8 +124,7 @@ Version control, also known as revision control, records changes to a file or se
 
 
 **2. Using Terminal, there are essential Git commands I must know.**
-
-[ Student Response: List the correct Git commands to do the actions listed below in Terminal. Replace CMD with the correct command and keep or enhance the brief description. **The last bullet provides an example**. 
+ 
 
 * **[ git clone ]**: Clone a repository
 * **[ git config --global user.name “[firstname lastname]” ]**: Set-up a global user name
@@ -128,33 +136,20 @@ Version control, also known as revision control, records changes to a file or se
 * **[ git help ]**: This command will bring up Git's help screen in Terminal!
     
 
-Include at least (1) in-text citation and reference used to complete this research item. ] 
+
+[Github Command Reference](https://education.github.com/git-cheat-sheet-education.pdf) 
 
 
 
 **3. Authenticating with GitHub from Git.**
 
-[ Student Response: HTTPS is the the correct way to connect to GitHub in Project & Portfolio. Describe how you connect using this protocol. Include at least (1) in-text citation and reference used to complete this research item. ] 
-
-
-
-
+*HTTPS is the the correct way to connect to GitHub in Project & Portfolio. I would "git init" the directory then I would "git status" to see the updated files. I would each file to be committed. Example: "git add <files_to_be_committed>". I would then "git checkout" the branch to make sure it's in the right branch. I would "git remote -v" then check the remote origin. Then I would "git commit -m "a meaningful message", then "git push origin <branch_name>".* 
 
 
 # References
 
-Replace the example reference below with your own references in APA format.
+Github Education, Git Cheat Sheet. Retrieved from [https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
 
-
-Author, A. A., & Author, B. B. (Date of publication). Title of article. Title of Online Periodical, volume number(issue number if available). Retrieved from
-[http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html](http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html)
-
-Author, A. A., & Author, B. B. (Date of publication). Title of article. Title of Online Periodical, volume number(issue number if available). Retrieved from
-[https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6](https://docs.microsoft.com/en-us/powershell/scripting/overview?view=powershell-6)
-https://github.com/PowerShell/PowerShell
-https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6
-
-Author, A. A., & Author, B. B. (Date of publication). Title of article. Title of Online Periodical, volume number(issue number if available). Retrieved from
-[http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html](http://www.openforis.org/tools/sepal/tutorials/using-the-command-line.html)
-
+Microsoft Docs, (October 2019). PowerShell Documentation. Retrieved from
+[https://docs.microsoft.com/en-us/powershell/?view=powershell-6]https://docs.microsoft.com/en-us/powershell/?view=powershell-6)
 
