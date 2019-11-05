@@ -22,16 +22,17 @@ Professional developers use Terminal daily. It's essential to understand some fu
 **1. Using Terminal, there are essential Linux commands I must know.**
  
 * **clear**: Clear the Screen 
-* **pwd**: Print the "Working Directory"
-* **ls**: List files and folders
-* **ls -a**: List files and folders, including invisible files
-* **ls -la**: List all files and folders, in human readable form
-* **cd**: Change directory
-* **cd ..** or
+**pwd**: Print the "Working Directory"
+**ls**: List files and folders
+**ls -a**: List files and folders, including invisible files
+**ls -la**: List all files and folders, in human readable form
+**cd**: Change directory
+**cd ..** or
 **cd /**: Change directory, go to root
-* **cd <name_of_dir> or cd ~**: Change directory, go up one folder level
-* **cd ./<first_name_of_dir>/<second_name_of_dir>**: Change directory, go up two folder levels
-* **cd ~/Desktop/**: Change directory to my desktop! 
+**cd <name_of_dir>** or 
+**cd ~**: Change directory, go up one folder level
+**cd ./<first_name_of_dir>/<second_name_of_dir>**: Change directory, go up two folder levels
+**cd ~/Desktop/**: Change directory to my desktop! 
 
 
 **2. After Trying Linux Commands in Terminal, I learned...**
