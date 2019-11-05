@@ -22,10 +22,6 @@ Professional developers use Terminal daily. It's essential to understand some fu
 
 **1. Using Terminal, there are essential Linux commands I must know.**
  
-
-**The last bullet provides an example**.
-# TODO
-
 * **[ clear ]**: Clear the Screen 
 * **[ pwd ]**: Print the "Working Directory"
 * **[ ls ]**: List files and folders
@@ -80,7 +76,7 @@ Version control, also known as revision control, records changes to a file or se
 ### 1. There are 3 types of version control.
 
 
-### a. Local version control system.
+**a. Local version control system.**
 
 ####  Local
 > This is the method that most people implement. It involves copying files from one  
