@@ -11,7 +11,6 @@ const API_KEY = REACT_APP_API_KEY;
 
 const config = {
   apiKey: API_KEY,
-  credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://aimee-github.firebaseio.com',
   authDomain: 'aimee-github.firebaseapp.com'
 
@@ -30,7 +29,7 @@ class Auth extends React.Component {
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
       firebase.auth.PhoneAuthProvider.PROVIDER_ID,
 
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID
+      //firebase.auth.FacebookAuthProvider.PROVIDER_ID
     ],
  
   
