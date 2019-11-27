@@ -11,6 +11,7 @@ const API_KEY = REACT_APP_API_KEY;
 
 const config = {
   apiKey: API_KEY,
+  credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://aimee-github.firebaseio.com',
   authDomain: 'aimee-github.firebaseapp.com'
 
