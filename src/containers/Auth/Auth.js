@@ -12,7 +12,7 @@ const API_KEY = REACT_APP_API_KEY;
 const config = {
   apiKey: API_KEY,
   databaseURL: 'https://aimee-github.firebaseio.com',
-  authDomain: 'aimee-github.firebaseapp.com'
+  authDomain: 'aimeelynnramirez.github.io'
 
 };
 firebase.initializeApp(config);
@@ -35,7 +35,7 @@ class Auth extends React.Component {
   
     callbacks: {
       // Avoid redirects after sign-in.
-      signInSuccessWithAuthResult: () => false
+     /// signInSuccessWithAuthResult: () => false
     }
   };
 
