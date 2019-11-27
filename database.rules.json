@@ -1,0 +1,37 @@
+{
+  "rules": {
+    "Temp":{
+      ".read":true
+    },
+      
+         "posts":{
+      "$uid": {
+       ".read":true,
+       ".write": true,
+      }  
+    },
+     "users": {
+       //to monitor logins
+       //".write": true,
+        //".read": true, 
+         "dBlzMaFDZ5dBJllxGklyCIW4Ld52":{
+          ".read":false, 
+          ".write":true
+        
+       },   
+          //".read": "$uid === auth.uid",
+           //".write": "$uid === auth.uid"
+     },
+ 
+        
+           //"$uid": {
+             // only sign in my email and uid
+            // ".read": "'Eeiws1WMnaRS5k8CiVg17xrcq353'=== $uid",
+            // ".write":"'Eeiws1WMnaRS5k8CiVg17xrcq353' === $uid"
+       // }
+        
+   	 //}
+   }
+}
+    
+

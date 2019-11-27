@@ -12,7 +12,7 @@ const API_KEY = REACT_APP_API_KEY;
 const config = {
   apiKey: API_KEY,
   databaseURL: 'https://aimee-github.firebaseio.com',
-  authDomain: 'aimeelynnramirez.github.io/dashboard'
+  authDomain: 'aimee-github.firebaseapp.com'
 
 };
 firebase.initializeApp(config);
