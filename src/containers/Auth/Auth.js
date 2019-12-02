@@ -25,14 +25,14 @@ class Auth extends React.Component {
     signInSuccessUrl:'/dashboard/new-post',
     signInOptions: [
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      ///firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
 
     ],
  
   
     callbacks: {
       // Avoid redirects after sign-in.
-      signInSuccessWithAuthResult: () => false
+     /// signInSuccessWithAuthResult: () => false
     }
   };
 
@@ -60,7 +60,7 @@ class Auth extends React.Component {
     return (
       <div className={classes.Auth}>
         <h1>Comment</h1>
-        <p>Welcome { firebase.auth().currentUser.email }! <br/> You are now signed-in!</p>
+        <p>Welcome {firebase.auth().currentUser.displayName || firebase.auth().currentUser.email || firebase.auth().currentUser.phoneNumber }! <br/> You are now signed-in!</p>
         <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
         <NewPost/>
        
