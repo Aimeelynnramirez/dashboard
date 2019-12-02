@@ -4,10 +4,8 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import NewPost from '../Blog/NewPost/NewPost.js';
 import classes from './Auth.css';
-//import REACT_APP_API_KEY from '../../components/config-keys.js';
 
-
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY = 'AIzaSyCs6Mc6RAaILb6uw_RgnvWIED137gzWjIU' ;
 
 const config = {
   apiKey: API_KEY,
@@ -34,7 +32,7 @@ class Auth extends React.Component {
   
     callbacks: {
       // Avoid redirects after sign-in.
-     /// signInSuccessWithAuthResult: () => false
+      signInSuccessWithAuthResult: () => false
     }
   };
 
@@ -62,7 +60,7 @@ class Auth extends React.Component {
     return (
       <div className={classes.Auth}>
         <h1>Comment</h1>
-        <p>Welcome {firebase.auth().currentUser.displayName || firebase.auth().currentUser.email || firebase.auth().currentUser.phoneNumber }! <br/> You are now signed-in!</p>
+        <p>Welcome { firebase.auth().currentUser.email }! <br/> You are now signed-in!</p>
         <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
         <NewPost/>
        
