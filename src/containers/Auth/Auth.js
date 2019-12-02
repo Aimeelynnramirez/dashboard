@@ -4,10 +4,10 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import NewPost from '../Blog/NewPost/NewPost.js';
 import classes from './Auth.css';
-import REACT_APP_API_KEY from '../../components/config-keys.js';
+//import REACT_APP_API_KEY from '../../components/config-keys.js';
 
 
-const API_KEY = REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const config = {
   apiKey: API_KEY,
@@ -27,7 +27,7 @@ class Auth extends React.Component {
     signInSuccessUrl:'/dashboard/new-post',
     signInOptions: [
       firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      ///firebase.auth.PhoneAuthProvider.PROVIDER_ID,
 
       //firebase.auth.FacebookAuthProvider.PROVIDER_ID
     ],
